@@ -63,7 +63,7 @@ given vertex i, it yields the edges starting at i as tuples (vertex, weight).
 
 **Tasks and demanded results**
 
-A. **Base scenario: Full search**
+``A.`` **Base scenario: Full search**
 
   In this scenario, a graph has to be (nearly) **fully searched**
   for solving the respective analysis task.
@@ -81,7 +81,7 @@ A. **Base scenario: Full search**
   4. **Dijkstra, simplified task: 100 T vertices.**
      Compute shortest path to vertex 100,000.
 
-B. **Scenario variant: Partial search 33%**
+``B.`` **Scenario variant: Partial search 33%**
 
    **Dijkstra: 3,6 M vertices.**
    Compute distance of vertex 2,400,000 from vertex 1,200,000.
@@ -89,7 +89,7 @@ B. **Scenario variant: Partial search 33%**
    The analysis results shows, that only 33% of the graph really needs
    to be regarded for solving this task.
 
-C. **Scenario variant: Three analysis runs**
+``C.`` **Scenario variant: Three analysis runs**
 
    **Dijkstra: 1,2 M vertices (like in 2.)**
 
@@ -108,7 +108,7 @@ Please see the homepage of the documentation of NoGraphs
 (https://nographs.readthedocs.io)
 for an interpretation of these results.
 
-A. 1. Breadth first search, 1.20 M vertices, 1 goal:
+``A. 1.`` Breadth first search, 1.20 M vertices, 1 goal:
 
 +-----------+-------+--------+--------------------------------+
 | lib+gear  | runtime (sec.) |   peak memory (bytes)          |
@@ -144,7 +144,7 @@ A. 1. Breadth first search, 1.20 M vertices, 1 goal:
 | NetworkX  | _8.86 | _10.65 | 1,417,015,717 | _1,479,936,905 |
 +-----------+-------+--------+---------------+----------------+
 
-A. 2. Dijkstra distances, 1,2 M vertices, 3 goals:
+``A. 2.`` Dijkstra distances, 1,2 M vertices, 3 goals:
 
 +-----------+-------+--------+--------------------------------+
 | lib+gear  | runtime (sec.) |   peak memory (bytes)          |
@@ -180,7 +180,7 @@ A. 2. Dijkstra distances, 1,2 M vertices, 3 goals:
 | NetworkX  | _8.86 | _11.60 | 1,417,016,696 | _1,541,442,000 |
 +-----------+-------+--------+---------------+----------------+
 
-B. Dijkstra distances, 3,6 M vertices, 1 goal, 1/3 regarded:
+``B.`` Dijkstra distances, 3,6 M vertices, 1 goal, 1/3 regarded:
 
 +-----------+-------+--------+--------------------------------+
 | lib+gear  | runtime (sec.) |   peak memory (bytes)          |
@@ -216,7 +216,7 @@ B. Dijkstra distances, 3,6 M vertices, 1 goal, 1/3 regarded:
 | NetworkX  |  n.a. |   n.a. |          n.a. |           n.a. |
 +-----------+-------+--------+---------------+----------------+
 
-C. Dijkstra distances, 1,2 M vertices, 3 goals, executed 3 times:
+``C.`` Dijkstra distances, 1,2 M vertices, 3 goals, executed 3 times:
 
 +-----------+-------+--------+--------------------------------+
 | lib+gear  | runtime (sec.) |   peak memory (bytes)          |
@@ -252,7 +252,7 @@ C. Dijkstra distances, 1,2 M vertices, 3 goals, executed 3 times:
 | NetworkX  |  n.a. |   n.a. |          n.a. |           n.a. |
 +-----------+-------+--------+---------------+----------------+
 
-A. 3. Dijkstra path and distance, 1,2 M vertices, 1 goal:
+``A. 3.`` Dijkstra path and distance, 1,2 M vertices, 1 goal:
 
 +-----------+-------+--------+--------------------------------+
 | lib+gear  | runtime (sec.) |   peak memory (bytes)          |
@@ -288,7 +288,7 @@ A. 3. Dijkstra path and distance, 1,2 M vertices, 1 goal:
 | NetworkX  |  n.a. |   n.a. |          n.a. |           n.a. |
 +-----------+-------+--------+---------------+----------------+
 
-A. 4. Dijkstra path and distance, 100 T vertices, 1 goal:
+``A. 4.`` Dijkstra path and distance, 100 T vertices, 1 goal:
 
 +-----------+-------+--------+--------------------------------+
 | lib+gear  | runtime (sec.) |   peak memory (bytes)          |
