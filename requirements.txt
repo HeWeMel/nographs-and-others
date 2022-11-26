@@ -1,4 +1,10 @@
 pip>=22.0.4
-nographs
+docutils
 flake8
-networkx
+nographs==3.0.0.dev1
+networkx==2.8.8
+retworkx==0.12.0
+igraph==0.10.2
+intbitset
+mypy
+black

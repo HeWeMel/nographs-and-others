@@ -1,0 +1,3383 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+<title>README.rst</title>
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 8954 2022-01-20 10:10:25Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See https://docutils.sourceforge.io/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+.subscript {
+  vertical-align: sub;
+  font-size: smaller }
+
+.superscript {
+  vertical-align: super;
+  font-size: smaller }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title, .code .error {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left, table.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right, table.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table.align-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+.align-top    {
+  vertical-align: top }
+
+.align-middle {
+  vertical-align: middle }
+
+.align-bottom {
+  vertical-align: bottom }
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math, pre.code {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+pre.code .ln { color: grey; } /* line numbers */
+pre.code, code { background-color: #eeeeee }
+pre.code .comment, code .comment { color: #5C6576 }
+pre.code .keyword, code .keyword { color: #3B0D06; font-weight: bold }
+pre.code .literal.string, code .literal.string { color: #0C5404 }
+pre.code .name.builtin, code .name.builtin { color: #352B84 }
+pre.code .deleted, code .deleted { background-color: #DEB0A1}
+pre.code .inserted, code .inserted { background-color: #A3D289}
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+/* "booktabs" style (no vertical lines) */
+table.docutils.booktabs {
+  border: 0px;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  border-collapse: collapse;
+}
+table.docutils.booktabs * {
+  border: 0px;
+}
+table.docutils.booktabs th {
+  border-bottom: thin solid;
+  text-align: left;
+}
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+</head>
+<body>
+<div class="document">
+
+
+<p><strong>This project</strong></p>
+<p>The purpose of this project is to compare the performance of the
+python graph library NoGraphs with other graph libraries.</p>
+<p>Homepage of the documentation of NoGraphs: <a class="reference external" href="https://nographs.readthedocs.io">https://nographs.readthedocs.io</a></p>
+<p><strong>The libraries</strong></p>
+<ul class="simple">
+<li>NoGraphs<ul>
+<li>Description: &quot;Graph analysis - the lazy (evaluation) way: Analysis
+on the fly, for graphs, that are computed and/or adapted on the fly.&quot;</li>
+<li>Languages: Python</li>
+<li>PyPI package: <a class="reference external" href="https://pypi.org/project/nographs">https://pypi.org/project/nographs</a></li>
+</ul>
+</li>
+<li>igraph<ul>
+<li>Description: &quot;Python interface to the igraph high performance graph
+library, primarily aimed at complex network research and analysis.&quot;</li>
+<li>Languages: Python and C</li>
+<li>PyPI package: <a class="reference external" href="https://pypi.org/project/igraph">https://pypi.org/project/igraph</a></li>
+</ul>
+</li>
+<li>retworkx<ul>
+<li>Description: &quot;High performance graph data structures and algorithms&quot;</li>
+<li>Languages: Python and Rust</li>
+<li>PyPI package: <a class="reference external" href="https://pypi.org/project/retworkx">https://pypi.org/project/retworkx</a></li>
+</ul>
+</li>
+<li>networkx<ul>
+<li>Description: &quot;Python package for creating and manipulating graphs and networks&quot;</li>
+<li>Languages: Python</li>
+<li>PyPI package: <a class="reference external" href="https://pypi.org/project/networkx">https://pypi.org/project/networkx</a></li>
+</ul>
+</li>
+</ul>
+<p>All libraries are used in the newest version available at Nov. 13th 2022.</p>
+<p><strong>The setup</strong></p>
+<p>Test machine: Core i5-4570, 3.2 Ghz, 4 cores, 16 GB memory, Windows.</p>
+<p>In other words: A small office PC, that is nine years old.</p>
+<p>Python: 3.10</p>
+<p>(Will be updated to 3.11 when all used dependencies can be fulfilled)</p>
+<p><strong>The graph</strong></p>
+<p>The graph used in the test is defined by the following function. For a
+given vertex i, it yields the edges starting at i as tuples (vertex, weight).</p>
+<pre class="code python literal-block">
+&gt;&gt;&gt; def next_edges(i, _):
+...     j = (i + i // 6) % 6
+...     yield i + 1, j * 2 + 1
+...     if i % 2 == 0:
+...         yield i + 6, 7 - j
+...     elif i % 1200000 &gt; 5:
+...         yield i - 6, 1
+</pre>
+<p><strong>Tasks and demanded results</strong></p>
+<p><strong>A. Base scenario: Full search</strong></p>
+<blockquote>
+<p>In this scenario, a graph has to be (nearly) <strong>fully searched</strong>
+for solving the respective analysis task.</p>
+<ol class="arabic simple">
+<li><strong>BFS: 1.2 M vertices.</strong>
+Compute depth of vertex 1,200,000 from start vertex 0.</li>
+<li><strong>Dijkstra: 1,2 M vertices.</strong>
+Compute distances of vertices 1,000,000 and 1,150,000 and 1,200,000
+from vertex 0.</li>
+<li><strong>Dijkstra: 1,2 M vertices.</strong>
+Compute shortest path from vertex 0 to vertex 1,200,000.</li>
+<li><strong>Dijkstra, simplified task: 100 T vertices.</strong>
+Compute shortest path to vertex 100,000.</li>
+</ol>
+</blockquote>
+<ol class="upperalpha" start="2">
+<li><p class="first"><strong>Scenario variant: Partial search 33%</strong></p>
+<p><strong>Dijkstra: 3,6 M vertices.</strong>
+Compute distance of vertex 2,400,000 from vertex 1,200,000.</p>
+<p>The analysis results shows, that only 33% of the graph really needs
+to be regarded for solving this task.</p>
+</li>
+<li><p class="first"><strong>Scenario variant: Three analysis runs</strong></p>
+<p><strong>Dijkstra: 1,2 M vertices (like in 2.)</strong></p>
+<p>In this scenario, three analysis runs are performed for a graph built
+only once.</p>
+</li>
+</ol>
+<p>NoGraphs can directly solve these tasks based on the given infinite graph.
+The other libraries get as hint, what part of the graph they can focus on
+to solve the tasks.</p>
+<p><strong>The results</strong></p>
+<p>The following tables show the results of the tests.</p>
+<p>Please see the homepage of the documentation of NoGraphs
+(<a class="reference external" href="https://nographs.readthedocs.io">https://nographs.readthedocs.io</a>)
+for an interpretation of these results.</p>
+<ol class="upperalpha simple">
+<li><ol class="first arabic">
+<li>Breadth first search, 1.20 M vertices, 1 goal:</li>
+</ol>
+</li>
+</ol>
+<table border="1" class="docutils">
+<colgroup>
+<col width="19%" />
+<col width="12%" />
+<col width="14%" />
+<col width="26%" />
+<col width="28%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">lib+gear</th>
+<th class="head" colspan="2">runtime (sec.)</th>
+<th class="head" colspan="2">peak memory (bytes)</th>
+</tr>
+<tr><th class="head">&nbsp;</th>
+<th class="head">graph</th>
+<th class="head">total</th>
+<th class="head">graph</th>
+<th class="head">total</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>NoGraphs</td>
+<td>_0.00</td>
+<td>__1.14</td>
+<td>____________0</td>
+<td>____67,948,224</td>
+</tr>
+<tr><td><a class="reference external" href="mailto:nog&#64;IntId">nog&#64;IntId</a></td>
+<td>_0.00</td>
+<td>__1.66</td>
+<td>____________0</td>
+<td>_______164,906</td>
+</tr>
+<tr><td>&#64;IntIdA0B</td>
+<td>_0.00</td>
+<td>__1.30</td>
+<td>____________0</td>
+<td>_____1,232,556</td>
+</tr>
+<tr><td>&#64;IntIdL0B</td>
+<td>_0.00</td>
+<td>__1.17</td>
+<td>____________0</td>
+<td>____10,781,476</td>
+</tr>
+<tr><td>&#64;IntIdF</td>
+<td>_0.00</td>
+<td>__1.66</td>
+<td>____________0</td>
+<td>_______161,232</td>
+</tr>
+<tr><td>&#64;IntIdF0B</td>
+<td>_0.00</td>
+<td>__1.29</td>
+<td>____________0</td>
+<td>_____1,232,412</td>
+</tr>
+<tr><td><a class="reference external" href="mailto:nog&#64;Int">nog&#64;Int</a></td>
+<td>_0.00</td>
+<td>__1.68</td>
+<td>____________0</td>
+<td>_______160,976</td>
+</tr>
+<tr><td>&#64;IntF</td>
+<td>_0.00</td>
+<td>__1.69</td>
+<td>____________0</td>
+<td>_______160,976</td>
+</tr>
+<tr><td>&#64;IntF0B</td>
+<td>_0.00</td>
+<td>__1.33</td>
+<td>____________0</td>
+<td>_____1,232,156</td>
+</tr>
+<tr><td>nog+intset</td>
+<td>_0.00</td>
+<td>__1.14</td>
+<td>____________0</td>
+<td>_______169,686</td>
+</tr>
+<tr><td>nog+shift</td>
+<td>n.a.</td>
+<td>n.a.</td>
+<td>n.a.</td>
+<td>n.a.</td>
+</tr>
+<tr><td>igraph</td>
+<td>13.95</td>
+<td>_14.58</td>
+<td>___21,531,780</td>
+<td>____21,531,780</td>
+</tr>
+<tr><td>RetworkX</td>
+<td>_1.64</td>
+<td>__2.66</td>
+<td>___33,594,160</td>
+<td>____76,761,129</td>
+</tr>
+<tr><td>NetworkX</td>
+<td>_8.86</td>
+<td>_10.65</td>
+<td>1,417,015,717</td>
+<td>_1,479,936,905</td>
+</tr>
+</tbody>
+</table>
+<ol class="upperalpha simple">
+<li><ol class="first arabic" start="2">
+<li>Dijkstra distances, 1,2 M vertices, 3 goals:</li>
+</ol>
+</li>
+</ol>
+<table border="1" class="docutils">
+<colgroup>
+<col width="19%" />
+<col width="12%" />
+<col width="14%" />
+<col width="26%" />
+<col width="28%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">lib+gear</th>
+<th class="head" colspan="2">runtime (sec.)</th>
+<th class="head" colspan="2">peak memory (bytes)</th>
+</tr>
+<tr><th class="head">&nbsp;</th>
+<th class="head">graph</th>
+<th class="head">total</th>
+<th class="head">graph</th>
+<th class="head">total</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>NoGraphs</td>
+<td>_0.00</td>
+<td>__2.45</td>
+<td>____________0</td>
+<td>____82,489,608</td>
+</tr>
+<tr><td><a class="reference external" href="mailto:nog&#64;IntId">nog&#64;IntId</a></td>
+<td>_0.00</td>
+<td>__2.04</td>
+<td>____________0</td>
+<td>_____9,619,092</td>
+</tr>
+<tr><td>&#64;IntIdA0B</td>
+<td>n.a.</td>
+<td>n.a.</td>
+<td>n.a.</td>
+<td>n.a.</td>
+</tr>
+<tr><td>&#64;IntIdL0B</td>
+<td>_0.00</td>
+<td>__2.04</td>
+<td>____________0</td>
+<td>_____9,616,420</td>
+</tr>
+<tr><td>&#64;IntIdF</td>
+<td>_0.00</td>
+<td>__2.28</td>
+<td>____________0</td>
+<td>_____4,915,489</td>
+</tr>
+<tr><td>&#64;IntIdF0B</td>
+<td>n.a.</td>
+<td>n.a.</td>
+<td>n.a.</td>
+<td>n.a.</td>
+</tr>
+<tr><td><a class="reference external" href="mailto:nog&#64;Int">nog&#64;Int</a></td>
+<td>_0.00</td>
+<td>__2.05</td>
+<td>____________0</td>
+<td>_____9,616,420</td>
+</tr>
+<tr><td>&#64;IntF</td>
+<td>_0.00</td>
+<td>__2.28</td>
+<td>____________0</td>
+<td>_____4,915,089</td>
+</tr>
+<tr><td>&#64;IntF0B</td>
+<td>n.a.</td>
+<td>n.a.</td>
+<td>n.a.</td>
+<td>n.a.</td>
+</tr>
+<tr><td>nog+intset</td>
+<td>_0.00</td>
+<td>__2.27</td>
+<td>____________0</td>
+<td>_____4,915,089</td>
+</tr>
+<tr><td>nog+shift</td>
+<td>n.a.</td>
+<td>n.a.</td>
+<td>n.a.</td>
+<td>n.a.</td>
+</tr>
+<tr><td>igraph</td>
+<td>13.82</td>
+<td>_14.34</td>
+<td>___21,530,892</td>
+<td>____21,530,892</td>
+</tr>
+<tr><td>RetworkX</td>
+<td>_1.62</td>
+<td>__1.97</td>
+<td>___33,593,824</td>
+<td>____33,596,252</td>
+</tr>
+<tr><td>NetworkX</td>
+<td>_8.86</td>
+<td>_11.60</td>
+<td>1,417,016,696</td>
+<td>_1,541,442,000</td>
+</tr>
+</tbody>
+</table>
+<ol class="upperalpha simple" start="2">
+<li>Dijkstra distances, 3,6 M vertices, 1 goal, 1/3 regarded:</li>
+</ol>
+<table border="1" class="docutils">
+<colgroup>
+<col width="19%" />
+<col width="12%" />
+<col width="14%" />
+<col width="26%" />
+<col width="28%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">lib+gear</th>
+<th class="head" colspan="2">runtime (sec.)</th>
+<th class="head" colspan="2">peak memory (bytes)</th>
+</tr>
+<tr><th class="head">&nbsp;</th>
+<th class="head">graph</th>
+<th class="head">total</th>
+<th class="head">graph</th>
+<th class="head">total</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>NoGraphs</td>
+<td>_0.00</td>
+<td>__2.44</td>
+<td>____________0</td>
+<td>____82,494,776</td>
+</tr>
+<tr><td><a class="reference external" href="mailto:nog&#64;IntId">nog&#64;IntId</a></td>
+<td>_0.00</td>
+<td>__2.03</td>
+<td>____________0</td>
+<td>____19,482,160</td>
+</tr>
+<tr><td>&#64;IntIdA0B</td>
+<td>n.a.</td>
+<td>n.a.</td>
+<td>n.a.</td>
+<td>n.a.</td>
+</tr>
+<tr><td>&#64;IntIdL0B</td>
+<td>_0.00</td>
+<td>__2.03</td>
+<td>____________0</td>
+<td>____19,482,160</td>
+</tr>
+<tr><td>&#64;IntIdF</td>
+<td>_0.00</td>
+<td>__2.35</td>
+<td>____________0</td>
+<td>____10,166,713</td>
+</tr>
+<tr><td>&#64;IntIdF0B</td>
+<td>n.a.</td>
+<td>n.a.</td>
+<td>n.a.</td>
+<td>n.a.</td>
+</tr>
+<tr><td><a class="reference external" href="mailto:nog&#64;Int">nog&#64;Int</a></td>
+<td>_0.00</td>
+<td>__2.04</td>
+<td>____________0</td>
+<td>____19,482,160</td>
+</tr>
+<tr><td>&#64;IntF</td>
+<td>_0.00</td>
+<td>__2.35</td>
+<td>____________0</td>
+<td>____10,166,713</td>
+</tr>
+<tr><td>&#64;IntF0B</td>
+<td>n.a.</td>
+<td>n.a.</td>
+<td>n.a.</td>
+<td>n.a.</td>
+</tr>
+<tr><td>nog+intset</td>
+<td>_0.00</td>
+<td>__2.35</td>
+<td>____________0</td>
+<td>____10,166,713</td>
+</tr>
+<tr><td>nog+shift</td>
+<td>_0.00</td>
+<td>__2.75</td>
+<td>____________0</td>
+<td>_____4,916,593</td>
+</tr>
+<tr><td>igraph</td>
+<td>110.30</td>
+<td>110.90</td>
+<td>___59,975,244</td>
+<td>____59,975,244</td>
+</tr>
+<tr><td>RetworkX</td>
+<td>_4.89</td>
+<td>__5.66</td>
+<td>__100,793,656</td>
+<td>___100,794,448</td>
+</tr>
+<tr><td>NetworkX</td>
+<td>n.a.</td>
+<td>n.a.</td>
+<td>n.a.</td>
+<td>n.a.</td>
+</tr>
+</tbody>
+</table>
+<ol class="upperalpha simple" start="3">
+<li>Dijkstra distances, 1,2 M vertices, 3 goals, executed 3 times:</li>
+</ol>
+<table border="1" class="docutils">
+<colgroup>
+<col width="19%" />
+<col width="12%" />
+<col width="14%" />
+<col width="26%" />
+<col width="28%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">lib+gear</th>
+<th class="head" colspan="2">runtime (sec.)</th>
+<th class="head" colspan="2">peak memory (bytes)</th>
+</tr>
+<tr><th class="head">&nbsp;</th>
+<th class="head">graph</th>
+<th class="head">total</th>
+<th class="head">graph</th>
+<th class="head">total</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>NoGraphs</td>
+<td>_0.00</td>
+<td>__7.33</td>
+<td>____________0</td>
+<td>____82,488,320</td>
+</tr>
+<tr><td><a class="reference external" href="mailto:nog&#64;IntId">nog&#64;IntId</a></td>
+<td>_0.00</td>
+<td>__6.08</td>
+<td>____________0</td>
+<td>_____9,617,068</td>
+</tr>
+<tr><td>&#64;IntIdA0B</td>
+<td>n.a.</td>
+<td>n.a.</td>
+<td>n.a.</td>
+<td>n.a.</td>
+</tr>
+<tr><td>&#64;IntIdL0B</td>
+<td>_0.00</td>
+<td>__6.08</td>
+<td>____________0</td>
+<td>_____9,617,068</td>
+</tr>
+<tr><td>&#64;IntIdF</td>
+<td>_0.00</td>
+<td>__6.79</td>
+<td>____________0</td>
+<td>_____4,915,729</td>
+</tr>
+<tr><td>&#64;IntIdF0B</td>
+<td>n.a.</td>
+<td>n.a.</td>
+<td>n.a.</td>
+<td>n.a.</td>
+</tr>
+<tr><td><a class="reference external" href="mailto:nog&#64;Int">nog&#64;Int</a></td>
+<td>_0.00</td>
+<td>__6.07</td>
+<td>____________0</td>
+<td>_____9,617,068</td>
+</tr>
+<tr><td>&#64;IntF</td>
+<td>_0.00</td>
+<td>__6.80</td>
+<td>____________0</td>
+<td>_____4,915,729</td>
+</tr>
+<tr><td>&#64;IntF0B</td>
+<td>n.a.</td>
+<td>n.a.</td>
+<td>n.a.</td>
+<td>n.a.</td>
+</tr>
+<tr><td>nog+intset</td>
+<td>_0.00</td>
+<td>__6.79</td>
+<td>____________0</td>
+<td>_____4,915,729</td>
+</tr>
+<tr><td>nog+shift</td>
+<td>n.a.</td>
+<td>n.a.</td>
+<td>n.a.</td>
+<td>n.a.</td>
+</tr>
+<tr><td>igraph</td>
+<td>13.17</td>
+<td>_14.63</td>
+<td>___21,530,892</td>
+<td>____21,530,892</td>
+</tr>
+<tr><td>RetworkX</td>
+<td>_1.63</td>
+<td>__2.58</td>
+<td>___33,593,824</td>
+<td>____33,594,756</td>
+</tr>
+<tr><td>NetworkX</td>
+<td>n.a.</td>
+<td>n.a.</td>
+<td>n.a.</td>
+<td>n.a.</td>
+</tr>
+</tbody>
+</table>
+<ol class="upperalpha simple">
+<li><ol class="first arabic" start="3">
+<li>Dijkstra path and distance, 1,2 M vertices, 1 goal:</li>
+</ol>
+</li>
+</ol>
+<table border="1" class="docutils">
+<colgroup>
+<col width="19%" />
+<col width="12%" />
+<col width="14%" />
+<col width="26%" />
+<col width="28%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">lib+gear</th>
+<th class="head" colspan="2">runtime (sec.)</th>
+<th class="head" colspan="2">peak memory (bytes)</th>
+</tr>
+<tr><th class="head">&nbsp;</th>
+<th class="head">graph</th>
+<th class="head">total</th>
+<th class="head">graph</th>
+<th class="head">total</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>NoGraphs</td>
+<td>_0.00</td>
+<td>__2.62</td>
+<td>____________0</td>
+<td>___126,332,524</td>
+</tr>
+<tr><td><a class="reference external" href="mailto:nog&#64;IntId">nog&#64;IntId</a></td>
+<td>_0.00</td>
+<td>__2.19</td>
+<td>____________0</td>
+<td>____46,153,544</td>
+</tr>
+<tr><td>&#64;IntIdA0B</td>
+<td>n.a.</td>
+<td>n.a.</td>
+<td>n.a.</td>
+<td>n.a.</td>
+</tr>
+<tr><td>&#64;IntIdL0B</td>
+<td>_0.00</td>
+<td>__2.20</td>
+<td>____________0</td>
+<td>____46,153,544</td>
+</tr>
+<tr><td>&#64;IntIdF</td>
+<td>_0.00</td>
+<td>__2.43</td>
+<td>____________0</td>
+<td>____41,452,352</td>
+</tr>
+<tr><td>&#64;IntIdF0B</td>
+<td>n.a.</td>
+<td>n.a.</td>
+<td>n.a.</td>
+<td>n.a.</td>
+</tr>
+<tr><td><a class="reference external" href="mailto:nog&#64;Int">nog&#64;Int</a></td>
+<td>_0.00</td>
+<td>__2.22</td>
+<td>____________0</td>
+<td>____26,988,580</td>
+</tr>
+<tr><td>&#64;IntF</td>
+<td>_0.00</td>
+<td>__2.45</td>
+<td>____________0</td>
+<td>____22,287,388</td>
+</tr>
+<tr><td>&#64;IntF0B</td>
+<td>n.a.</td>
+<td>n.a.</td>
+<td>n.a.</td>
+<td>n.a.</td>
+</tr>
+<tr><td>nog+intset</td>
+<td>_0.00</td>
+<td>__2.63</td>
+<td>____________0</td>
+<td>____22,287,388</td>
+</tr>
+<tr><td>nog+shift</td>
+<td>n.a.</td>
+<td>n.a.</td>
+<td>n.a.</td>
+<td>n.a.</td>
+</tr>
+<tr><td>igraph</td>
+<td>13.25</td>
+<td>_13.78</td>
+<td>___21,530,892</td>
+<td>____30,690,568</td>
+</tr>
+<tr><td>RetworkX</td>
+<td>n.a.</td>
+<td>n.a.</td>
+<td>n.a.</td>
+<td>n.a.</td>
+</tr>
+<tr><td>NetworkX</td>
+<td>n.a.</td>
+<td>n.a.</td>
+<td>n.a.</td>
+<td>n.a.</td>
+</tr>
+</tbody>
+</table>
+<ol class="upperalpha simple">
+<li><ol class="first arabic" start="4">
+<li>Dijkstra path and distance, 100 T vertices, 1 goal:</li>
+</ol>
+</li>
+</ol>
+<table border="1" class="docutils">
+<colgroup>
+<col width="19%" />
+<col width="12%" />
+<col width="14%" />
+<col width="26%" />
+<col width="28%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">lib+gear</th>
+<th class="head" colspan="2">runtime (sec.)</th>
+<th class="head" colspan="2">peak memory (bytes)</th>
+</tr>
+<tr><th class="head">&nbsp;</th>
+<th class="head">graph</th>
+<th class="head">total</th>
+<th class="head">graph</th>
+<th class="head">total</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>NoGraphs</td>
+<td>_0.00</td>
+<td>__0.22</td>
+<td>____________0</td>
+<td>____15,793,736</td>
+</tr>
+<tr><td><a class="reference external" href="mailto:nog&#64;IntId">nog&#64;IntId</a></td>
+<td>_0.00</td>
+<td>__0.18</td>
+<td>____________0</td>
+<td>_____4,004,268</td>
+</tr>
+<tr><td>&#64;IntIdA0B</td>
+<td>n.a.</td>
+<td>n.a.</td>
+<td>n.a.</td>
+<td>n.a.</td>
+</tr>
+<tr><td>&#64;IntIdL0B</td>
+<td>_0.00</td>
+<td>__0.18</td>
+<td>____________0</td>
+<td>_____4,002,956</td>
+</tr>
+<tr><td>&#64;IntIdF</td>
+<td>_0.00</td>
+<td>__0.20</td>
+<td>____________0</td>
+<td>_____3,532,748</td>
+</tr>
+<tr><td>&#64;IntIdF0B</td>
+<td>n.a.</td>
+<td>n.a.</td>
+<td>n.a.</td>
+<td>n.a.</td>
+</tr>
+<tr><td><a class="reference external" href="mailto:nog&#64;Int">nog&#64;Int</a></td>
+<td>_0.00</td>
+<td>__0.18</td>
+<td>____________0</td>
+<td>_____2,331,378</td>
+</tr>
+<tr><td>&#64;IntF</td>
+<td>_0.00</td>
+<td>__0.21</td>
+<td>____________0</td>
+<td>_____1,860,380</td>
+</tr>
+<tr><td>&#64;IntF0B</td>
+<td>n.a.</td>
+<td>n.a.</td>
+<td>n.a.</td>
+<td>n.a.</td>
+</tr>
+<tr><td>nog+intset</td>
+<td>_0.00</td>
+<td>__0.21</td>
+<td>____________0</td>
+<td>_____1,859,932</td>
+</tr>
+<tr><td>nog+shift</td>
+<td>n.a.</td>
+<td>n.a.</td>
+<td>n.a.</td>
+<td>n.a.</td>
+</tr>
+<tr><td>igraph</td>
+<td>_0.19</td>
+<td>__0.23</td>
+<td>____2,867,708</td>
+<td>_____2,867,708</td>
+</tr>
+<tr><td>RetworkX</td>
+<td>_0.14</td>
+<td>_57.84</td>
+<td>____2,793,880</td>
+<td>_____2,989,541</td>
+</tr>
+<tr><td>NetworkX</td>
+<td>_0.67</td>
+<td>_82.67</td>
+<td>__123,319,124</td>
+<td>_9,593,863,188</td>
+</tr>
+</tbody>
+</table>
+<p>Extra: Depth first search, 1 M vertices, random graph, exhaustive traverse</p>
+<p>(So far, not part of the benchmark. Will be included in future versions.)</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="19%" />
+<col width="12%" />
+<col width="14%" />
+<col width="26%" />
+<col width="28%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">lib+gear</th>
+<th class="head" colspan="2">runtime (sec.)</th>
+<th class="head" colspan="2">peak memory (bytes)</th>
+</tr>
+<tr><th class="head">&nbsp;</th>
+<th class="head">graph</th>
+<th class="head">total</th>
+<th class="head">graph</th>
+<th class="head">total</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>NoGraphs</td>
+<td>_0.00</td>
+<td>__7.22</td>
+<td>____________0</td>
+<td>___270,432,188</td>
+</tr>
+<tr><td><a class="reference external" href="mailto:nog&#64;IntId">nog&#64;IntId</a></td>
+<td>_0.00</td>
+<td>__7.25</td>
+<td>____________0</td>
+<td>___211,978,102</td>
+</tr>
+<tr><td>&#64;IntIdA0B</td>
+<td>_0.00</td>
+<td>__5.98</td>
+<td>____________0</td>
+<td>___212,871,191</td>
+</tr>
+<tr><td>&#64;IntIdL0B</td>
+<td>_0.00</td>
+<td>__6.75</td>
+<td>____________0</td>
+<td>___219,924,256</td>
+</tr>
+<tr><td>&#64;IntIdF</td>
+<td>_0.00</td>
+<td>__7.89</td>
+<td>____________0</td>
+<td>___211,978,102</td>
+</tr>
+<tr><td>&#64;IntIdF0B</td>
+<td>_0.00</td>
+<td>__5.97</td>
+<td>____________0</td>
+<td>___212,871,191</td>
+</tr>
+<tr><td><a class="reference external" href="mailto:nog&#64;Int">nog&#64;Int</a></td>
+<td>_0.00</td>
+<td>__7.36</td>
+<td>____________0</td>
+<td>____23,904,842</td>
+</tr>
+<tr><td>&#64;IntF</td>
+<td>_0.00</td>
+<td>__7.36</td>
+<td>____________0</td>
+<td>____23,904,842</td>
+</tr>
+<tr><td>&#64;IntF0B</td>
+<td>_0.00</td>
+<td>__6.05</td>
+<td>____________0</td>
+<td>____24,797,931</td>
+</tr>
+<tr><td>nog+intset</td>
+<td>_0.00</td>
+<td>__5.59</td>
+<td>____________0</td>
+<td>____23,911,252</td>
+</tr>
+<tr><td>nog+shift</td>
+<td>n.a.</td>
+<td>n.a.</td>
+<td>n.a.</td>
+<td>n.a.</td>
+</tr>
+<tr><td>igraph</td>
+<td>n.a.</td>
+<td>n.a.</td>
+<td>n.a.</td>
+<td>n.a.</td>
+</tr>
+<tr><td>RetworkX</td>
+<td>n.a.</td>
+<td>n.a.</td>
+<td>n.a.</td>
+<td>n.a.</td>
+</tr>
+<tr><td>NetworkX</td>
+<td>n.a.</td>
+<td>n.a.</td>
+<td>n.a.</td>
+<td>n.a.</td>
+</tr>
+</tbody>
+</table>
+<p>The following text is the detailed output of the tests:</p>
+<pre class="literal-block">
+===== Warmup of libraries =====
+-- NoGraphs --
+&gt; Time for warmup 0.000 seconds
+-- nog&#64;IntId --
+&gt; Time for warmup 0.000 seconds
+-- &#64;IntIdA0B --
+&gt; Time for warmup 0.000 seconds
+-- &#64;IntIdL0B --
+&gt; Time for warmup 0.000 seconds
+-- &#64;IntIdF --
+&gt; Time for warmup 0.000 seconds
+-- &#64;IntIdF0B --
+&gt; Time for warmup 0.000 seconds
+-- nog&#64;Int --
+&gt; Time for warmup 0.000 seconds
+-- &#64;IntF --
+&gt; Time for warmup 0.000 seconds
+-- &#64;IntF0B --
+&gt; Time for warmup 0.000 seconds
+-- nog+intset --
+&gt; Time for warmup 0.000 seconds
+-- nog+shift --
+&gt; Time for warmup 0.000 seconds
+-- igraph --
+&gt; Time for warmup 0.812 seconds
+-- RetworkX --
+&gt; Time for warmup 0.000 seconds
+-- NetworkX --
+&gt; Time for warmup 0.000 seconds
+
+---- Characteristics of the test cases ----
+Breadth first search, 1.20 M vertices, 1 goal:
+  vertices_count=1199991, min_vertex=0, max_vertex=1200000
+Dijkstra distances, 1,2 M vertices, 3 goals:
+  vertices_count=1200002, min_vertex=0, max_vertex=1200006
+Dijkstra distances, 3,6 M vertices, 1 goal, 1/3 regarded:
+  vertices_count=1200000, min_vertex=1200000, max_vertex=2400004
+Dijkstra distances, 1,2 M vertices, 3 goals, executed 3 times:
+  vertices_count=1200002, min_vertex=0, max_vertex=1200006
+Dijkstra path and distance, 100 T vertices, 1 goal:
+  vertices_count=100002, min_vertex=0, max_vertex=100008
+Dijkstra path and distance, 1,2 M vertices, 1 goal:
+  vertices_count=1200002, min_vertex=0, max_vertex=1200006
+Depth first search, 1M vertices, exhaustive search:
+  vertices_count=975509, min_vertex=0, max_vertex=999999
+
+===== Test case: Breadth first search, 1.20 M vertices, 1 goal =====
+---- Test run number 0  ----
+-- NoGraphs memory --
+Computed depth: 200000
+&gt; Total peak memory for graph and analysis: 67,948,224 bytes
+-- NoGraphs runtime --
+&gt; Time for graph and analysis: 1.139 seconds
+
+---- Test run number 1  ----
+-- NoGraphs runtime --
+&gt; Time for graph and analysis: 1.150 seconds
+
+---- Test run number 2  ----
+-- NoGraphs runtime --
+&gt; Time for graph and analysis: 1.145 seconds
+
+---- Test run number 3  ----
+-- NoGraphs runtime --
+&gt; Time for graph and analysis: 1.133 seconds
+
+---- Test run number 4  ----
+-- NoGraphs runtime --
+&gt; Time for graph and analysis: 1.136 seconds
+
+
+---- Test run number 0  ----
+-- nog&#64;IntId memory --
+Computed depth: 200000
+&gt; Total peak memory for graph and analysis: 164,906 bytes
+-- nog&#64;IntId runtime --
+&gt; Time for graph and analysis: 1.662 seconds
+
+---- Test run number 1  ----
+-- nog&#64;IntId runtime --
+&gt; Time for graph and analysis: 1.658 seconds
+
+---- Test run number 2  ----
+-- nog&#64;IntId runtime --
+&gt; Time for graph and analysis: 1.656 seconds
+
+---- Test run number 3  ----
+-- nog&#64;IntId runtime --
+&gt; Time for graph and analysis: 1.656 seconds
+
+---- Test run number 4  ----
+-- nog&#64;IntId runtime --
+&gt; Time for graph and analysis: 1.665 seconds
+
+
+---- Test run number 0  ----
+-- &#64;IntIdA0B memory --
+Computed depth: 200000
+&gt; Total peak memory for graph and analysis: 1,232,556 bytes
+-- &#64;IntIdA0B runtime --
+&gt; Time for graph and analysis: 1.299 seconds
+
+---- Test run number 1  ----
+-- &#64;IntIdA0B runtime --
+&gt; Time for graph and analysis: 1.289 seconds
+
+---- Test run number 2  ----
+-- &#64;IntIdA0B runtime --
+&gt; Time for graph and analysis: 1.296 seconds
+
+---- Test run number 3  ----
+-- &#64;IntIdA0B runtime --
+&gt; Time for graph and analysis: 1.342 seconds
+
+---- Test run number 4  ----
+-- &#64;IntIdA0B runtime --
+&gt; Time for graph and analysis: 1.292 seconds
+
+
+---- Test run number 0  ----
+-- &#64;IntIdL0B memory --
+Computed depth: 200000
+&gt; Total peak memory for graph and analysis: 10,781,476 bytes
+-- &#64;IntIdL0B runtime --
+&gt; Time for graph and analysis: 1.173 seconds
+
+---- Test run number 1  ----
+-- &#64;IntIdL0B runtime --
+&gt; Time for graph and analysis: 1.171 seconds
+
+---- Test run number 2  ----
+-- &#64;IntIdL0B runtime --
+&gt; Time for graph and analysis: 1.169 seconds
+
+---- Test run number 3  ----
+-- &#64;IntIdL0B runtime --
+&gt; Time for graph and analysis: 1.173 seconds
+
+---- Test run number 4  ----
+-- &#64;IntIdL0B runtime --
+&gt; Time for graph and analysis: 1.171 seconds
+
+
+---- Test run number 0  ----
+-- &#64;IntIdF memory --
+Computed depth: 200000
+&gt; Total peak memory for graph and analysis: 161,232 bytes
+-- &#64;IntIdF runtime --
+&gt; Time for graph and analysis: 1.659 seconds
+
+---- Test run number 1  ----
+-- &#64;IntIdF runtime --
+&gt; Time for graph and analysis: 1.657 seconds
+
+---- Test run number 2  ----
+-- &#64;IntIdF runtime --
+&gt; Time for graph and analysis: 1.658 seconds
+
+---- Test run number 3  ----
+-- &#64;IntIdF runtime --
+&gt; Time for graph and analysis: 1.662 seconds
+
+---- Test run number 4  ----
+-- &#64;IntIdF runtime --
+&gt; Time for graph and analysis: 1.655 seconds
+
+
+---- Test run number 0  ----
+-- &#64;IntIdF0B memory --
+Computed depth: 200000
+&gt; Total peak memory for graph and analysis: 1,232,412 bytes
+-- &#64;IntIdF0B runtime --
+&gt; Time for graph and analysis: 1.290 seconds
+
+---- Test run number 1  ----
+-- &#64;IntIdF0B runtime --
+&gt; Time for graph and analysis: 1.291 seconds
+
+---- Test run number 2  ----
+-- &#64;IntIdF0B runtime --
+&gt; Time for graph and analysis: 1.291 seconds
+
+---- Test run number 3  ----
+-- &#64;IntIdF0B runtime --
+&gt; Time for graph and analysis: 1.292 seconds
+
+---- Test run number 4  ----
+-- &#64;IntIdF0B runtime --
+&gt; Time for graph and analysis: 1.295 seconds
+
+
+---- Test run number 0  ----
+-- nog&#64;Int memory --
+Computed depth: 200000
+&gt; Total peak memory for graph and analysis: 160,976 bytes
+-- nog&#64;Int runtime --
+&gt; Time for graph and analysis: 1.683 seconds
+
+---- Test run number 1  ----
+-- nog&#64;Int runtime --
+&gt; Time for graph and analysis: 1.680 seconds
+
+---- Test run number 2  ----
+-- nog&#64;Int runtime --
+&gt; Time for graph and analysis: 1.674 seconds
+
+---- Test run number 3  ----
+-- nog&#64;Int runtime --
+&gt; Time for graph and analysis: 1.683 seconds
+
+---- Test run number 4  ----
+-- nog&#64;Int runtime --
+&gt; Time for graph and analysis: 1.681 seconds
+
+
+---- Test run number 0  ----
+-- &#64;IntF memory --
+Computed depth: 200000
+&gt; Total peak memory for graph and analysis: 160,976 bytes
+-- &#64;IntF runtime --
+&gt; Time for graph and analysis: 1.689 seconds
+
+---- Test run number 1  ----
+-- &#64;IntF runtime --
+&gt; Time for graph and analysis: 1.686 seconds
+
+---- Test run number 2  ----
+-- &#64;IntF runtime --
+&gt; Time for graph and analysis: 1.706 seconds
+
+---- Test run number 3  ----
+-- &#64;IntF runtime --
+&gt; Time for graph and analysis: 1.681 seconds
+
+---- Test run number 4  ----
+-- &#64;IntF runtime --
+&gt; Time for graph and analysis: 1.685 seconds
+
+
+---- Test run number 0  ----
+-- &#64;IntF0B memory --
+Computed depth: 200000
+&gt; Total peak memory for graph and analysis: 1,232,156 bytes
+-- &#64;IntF0B runtime --
+&gt; Time for graph and analysis: 1.330 seconds
+
+---- Test run number 1  ----
+-- &#64;IntF0B runtime --
+&gt; Time for graph and analysis: 1.329 seconds
+
+---- Test run number 2  ----
+-- &#64;IntF0B runtime --
+&gt; Time for graph and analysis: 1.330 seconds
+
+---- Test run number 3  ----
+-- &#64;IntF0B runtime --
+&gt; Time for graph and analysis: 1.327 seconds
+
+---- Test run number 4  ----
+-- &#64;IntF0B runtime --
+&gt; Time for graph and analysis: 1.368 seconds
+
+
+---- Test run number 0  ----
+-- nog+intset memory --
+Computed depth: 200000
+&gt; Total peak memory for graph and analysis: 169,686 bytes
+-- nog+intset runtime --
+&gt; Time for graph and analysis: 1.147 seconds
+
+---- Test run number 1  ----
+-- nog+intset runtime --
+&gt; Time for graph and analysis: 1.139 seconds
+
+---- Test run number 2  ----
+-- nog+intset runtime --
+&gt; Time for graph and analysis: 1.152 seconds
+
+---- Test run number 3  ----
+-- nog+intset runtime --
+&gt; Time for graph and analysis: 1.143 seconds
+
+---- Test run number 4  ----
+-- nog+intset runtime --
+&gt; Time for graph and analysis: 1.144 seconds
+
+
+
+---- Test run number 0  ----
+-- igraph memory --
+&gt; Peak memory for graph definition: 21,531,780 bytes
+Computed depth: 200000
+&gt; Total peak memory for graph and analysis: 21,531,780 bytes
+-- igraph runtime --
+&gt; Time for graph definition: 13.958 seconds
+&gt; Time for graph and analysis: 14.590 seconds
+
+---- Test run number 1  ----
+-- igraph runtime --
+&gt; Time for graph definition: 13.940 seconds
+&gt; Time for graph and analysis: 14.574 seconds
+
+---- Test run number 2  ----
+-- igraph runtime --
+&gt; Time for graph definition: 13.955 seconds
+&gt; Time for graph and analysis: 14.582 seconds
+
+---- Test run number 3  ----
+-- igraph runtime --
+&gt; Time for graph definition: 13.902 seconds
+&gt; Time for graph and analysis: 14.524 seconds
+
+---- Test run number 4  ----
+-- igraph runtime --
+&gt; Time for graph definition: 13.953 seconds
+&gt; Time for graph and analysis: 14.576 seconds
+
+
+---- Test run number 0  ----
+-- RetworkX memory --
+&gt; Peak memory for graph definition: 33,594,160 bytes
+Computed depth: 200000
+&gt; Total peak memory for graph and analysis: 76,761,129 bytes
+-- RetworkX runtime --
+&gt; Time for graph definition: 1.635 seconds
+&gt; Time for graph and analysis: 2.638 seconds
+
+---- Test run number 1  ----
+-- RetworkX runtime --
+&gt; Time for graph definition: 1.629 seconds
+&gt; Time for graph and analysis: 2.675 seconds
+
+---- Test run number 2  ----
+-- RetworkX runtime --
+&gt; Time for graph definition: 1.650 seconds
+&gt; Time for graph and analysis: 2.657 seconds
+
+---- Test run number 3  ----
+-- RetworkX runtime --
+&gt; Time for graph definition: 1.638 seconds
+&gt; Time for graph and analysis: 2.664 seconds
+
+---- Test run number 4  ----
+-- RetworkX runtime --
+&gt; Time for graph definition: 1.625 seconds
+&gt; Time for graph and analysis: 2.632 seconds
+
+
+---- Test run number 0  ----
+-- NetworkX memory --
+&gt; Peak memory for graph definition: 1,417,015,717 bytes
+Computed depth: 200000
+&gt; Total peak memory for graph and analysis: 1,479,936,905 bytes
+-- NetworkX runtime --
+&gt; Time for graph definition: 8.799 seconds
+&gt; Time for graph and analysis: 10.584 seconds
+
+---- Test run number 1  ----
+-- NetworkX runtime --
+&gt; Time for graph definition: 8.889 seconds
+&gt; Time for graph and analysis: 10.703 seconds
+
+---- Test run number 2  ----
+-- NetworkX runtime --
+&gt; Time for graph definition: 9.204 seconds
+&gt; Time for graph and analysis: 11.088 seconds
+
+---- Test run number 3  ----
+-- NetworkX runtime --
+&gt; Time for graph definition: 8.863 seconds
+&gt; Time for graph and analysis: 10.646 seconds
+
+---- Test run number 4  ----
+-- NetworkX runtime --
+&gt; Time for graph definition: 8.790 seconds
+&gt; Time for graph and analysis: 10.571 seconds
+
+
++-----------+-------+--------+--------------------------------+
+| lib+gear  | runtime (sec.) |   peak memory (bytes)          |
++-----------+-------+--------+---------------+----------------+
+|           | graph |  total |     graph     |     total      |
++===========+=======+========+===============+================+
+| NoGraphs  | _0.00 | __1.14 | ____________0 | ____67,948,224 |
++-----------+-------+--------+---------------+----------------+
+| nog&#64;IntId | _0.00 | __1.66 | ____________0 | _______164,906 |
++-----------+-------+--------+---------------+----------------+
+| &#64;IntIdA0B | _0.00 | __1.30 | ____________0 | _____1,232,556 |
++-----------+-------+--------+---------------+----------------+
+| &#64;IntIdL0B | _0.00 | __1.17 | ____________0 | ____10,781,476 |
++-----------+-------+--------+---------------+----------------+
+| &#64;IntIdF   | _0.00 | __1.66 | ____________0 | _______161,232 |
++-----------+-------+--------+---------------+----------------+
+| &#64;IntIdF0B | _0.00 | __1.29 | ____________0 | _____1,232,412 |
++-----------+-------+--------+---------------+----------------+
+| nog&#64;Int   | _0.00 | __1.68 | ____________0 | _______160,976 |
++-----------+-------+--------+---------------+----------------+
+| &#64;IntF     | _0.00 | __1.69 | ____________0 | _______160,976 |
++-----------+-------+--------+---------------+----------------+
+| &#64;IntF0B   | _0.00 | __1.33 | ____________0 | _____1,232,156 |
++-----------+-------+--------+---------------+----------------+
+| nog+intset| _0.00 | __1.14 | ____________0 | _______169,686 |
++-----------+-------+--------+---------------+----------------+
+| nog+shift |  n.a. |   n.a. |          n.a. |           n.a. |
++-----------+-------+--------+---------------+----------------+
+| igraph    | 13.95 | _14.58 | ___21,531,780 | ____21,531,780 |
++-----------+-------+--------+---------------+----------------+
+| RetworkX  | _1.64 | __2.66 | ___33,594,160 | ____76,761,129 |
++-----------+-------+--------+---------------+----------------+
+| NetworkX  | _8.86 | _10.65 | 1,417,015,717 | _1,479,936,905 |
++-----------+-------+--------+---------------+----------------+
+
+
+===== Test case: Dijkstra distances, 1,2 M vertices, 3 goals =====
+---- Test run number 0  ----
+-- NoGraphs memory --
+Computed distance sum: 2279877.0
+&gt; Total peak memory for graph and analysis: 82,489,608 bytes
+-- NoGraphs runtime --
+&gt; Time for graph and analysis: 2.442 seconds
+
+---- Test run number 1  ----
+-- NoGraphs runtime --
+&gt; Time for graph and analysis: 2.454 seconds
+
+---- Test run number 2  ----
+-- NoGraphs runtime --
+&gt; Time for graph and analysis: 2.447 seconds
+
+---- Test run number 3  ----
+-- NoGraphs runtime --
+&gt; Time for graph and analysis: 2.455 seconds
+
+---- Test run number 4  ----
+-- NoGraphs runtime --
+&gt; Time for graph and analysis: 2.450 seconds
+
+
+---- Test run number 0  ----
+-- nog&#64;IntId memory --
+Computed distance sum: 2279877.0
+&gt; Total peak memory for graph and analysis: 9,619,092 bytes
+-- nog&#64;IntId runtime --
+&gt; Time for graph and analysis: 2.042 seconds
+
+---- Test run number 1  ----
+-- nog&#64;IntId runtime --
+&gt; Time for graph and analysis: 2.039 seconds
+
+---- Test run number 2  ----
+-- nog&#64;IntId runtime --
+&gt; Time for graph and analysis: 2.037 seconds
+
+---- Test run number 3  ----
+-- nog&#64;IntId runtime --
+&gt; Time for graph and analysis: 2.050 seconds
+
+---- Test run number 4  ----
+-- nog&#64;IntId runtime --
+&gt; Time for graph and analysis: 2.033 seconds
+
+
+
+---- Test run number 0  ----
+-- &#64;IntIdL0B memory --
+Computed distance sum: 2279877.0
+&gt; Total peak memory for graph and analysis: 9,616,420 bytes
+-- &#64;IntIdL0B runtime --
+&gt; Time for graph and analysis: 2.034 seconds
+
+---- Test run number 1  ----
+-- &#64;IntIdL0B runtime --
+&gt; Time for graph and analysis: 2.041 seconds
+
+---- Test run number 2  ----
+-- &#64;IntIdL0B runtime --
+&gt; Time for graph and analysis: 2.039 seconds
+
+---- Test run number 3  ----
+-- &#64;IntIdL0B runtime --
+&gt; Time for graph and analysis: 2.045 seconds
+
+---- Test run number 4  ----
+-- &#64;IntIdL0B runtime --
+&gt; Time for graph and analysis: 2.044 seconds
+
+
+---- Test run number 0  ----
+-- &#64;IntIdF memory --
+Computed distance sum: 2279877.0
+&gt; Total peak memory for graph and analysis: 4,915,489 bytes
+-- &#64;IntIdF runtime --
+&gt; Time for graph and analysis: 2.282 seconds
+
+---- Test run number 1  ----
+-- &#64;IntIdF runtime --
+&gt; Time for graph and analysis: 2.280 seconds
+
+---- Test run number 2  ----
+-- &#64;IntIdF runtime --
+&gt; Time for graph and analysis: 2.280 seconds
+
+---- Test run number 3  ----
+-- &#64;IntIdF runtime --
+&gt; Time for graph and analysis: 2.289 seconds
+
+---- Test run number 4  ----
+-- &#64;IntIdF runtime --
+&gt; Time for graph and analysis: 2.561 seconds
+
+
+
+---- Test run number 0  ----
+-- nog&#64;Int memory --
+Computed distance sum: 2279877.0
+&gt; Total peak memory for graph and analysis: 9,616,420 bytes
+-- nog&#64;Int runtime --
+&gt; Time for graph and analysis: 2.032 seconds
+
+---- Test run number 1  ----
+-- nog&#64;Int runtime --
+&gt; Time for graph and analysis: 2.046 seconds
+
+---- Test run number 2  ----
+-- nog&#64;Int runtime --
+&gt; Time for graph and analysis: 2.043 seconds
+
+---- Test run number 3  ----
+-- nog&#64;Int runtime --
+&gt; Time for graph and analysis: 2.046 seconds
+
+---- Test run number 4  ----
+-- nog&#64;Int runtime --
+&gt; Time for graph and analysis: 2.046 seconds
+
+
+---- Test run number 0  ----
+-- &#64;IntF memory --
+Computed distance sum: 2279877.0
+&gt; Total peak memory for graph and analysis: 4,915,089 bytes
+-- &#64;IntF runtime --
+&gt; Time for graph and analysis: 2.279 seconds
+
+---- Test run number 1  ----
+-- &#64;IntF runtime --
+&gt; Time for graph and analysis: 2.273 seconds
+
+---- Test run number 2  ----
+-- &#64;IntF runtime --
+&gt; Time for graph and analysis: 2.274 seconds
+
+---- Test run number 3  ----
+-- &#64;IntF runtime --
+&gt; Time for graph and analysis: 2.278 seconds
+
+---- Test run number 4  ----
+-- &#64;IntF runtime --
+&gt; Time for graph and analysis: 2.276 seconds
+
+
+
+---- Test run number 0  ----
+-- nog+intset memory --
+Computed distance sum: 2279877.0
+&gt; Total peak memory for graph and analysis: 4,915,089 bytes
+-- nog+intset runtime --
+&gt; Time for graph and analysis: 2.277 seconds
+
+---- Test run number 1  ----
+-- nog+intset runtime --
+&gt; Time for graph and analysis: 2.276 seconds
+
+---- Test run number 2  ----
+-- nog+intset runtime --
+&gt; Time for graph and analysis: 2.273 seconds
+
+---- Test run number 3  ----
+-- nog+intset runtime --
+&gt; Time for graph and analysis: 2.273 seconds
+
+---- Test run number 4  ----
+-- nog+intset runtime --
+&gt; Time for graph and analysis: 2.270 seconds
+
+
+
+---- Test run number 0  ----
+-- igraph memory --
+&gt; Peak memory for graph definition: 21,530,892 bytes
+Computed distance sum: 2279877.0
+&gt; Total peak memory for graph and analysis: 21,530,892 bytes
+-- igraph runtime --
+&gt; Time for graph definition: 13.857 seconds
+&gt; Time for graph and analysis: 14.405 seconds
+
+---- Test run number 1  ----
+-- igraph runtime --
+&gt; Time for graph definition: 13.755 seconds
+&gt; Time for graph and analysis: 14.295 seconds
+
+---- Test run number 2  ----
+-- igraph runtime --
+&gt; Time for graph definition: 13.817 seconds
+&gt; Time for graph and analysis: 14.338 seconds
+
+---- Test run number 3  ----
+-- igraph runtime --
+&gt; Time for graph definition: 14.358 seconds
+&gt; Time for graph and analysis: 14.872 seconds
+
+---- Test run number 4  ----
+-- igraph runtime --
+&gt; Time for graph definition: 13.814 seconds
+&gt; Time for graph and analysis: 14.329 seconds
+
+
+---- Test run number 0  ----
+-- RetworkX memory --
+&gt; Peak memory for graph definition: 33,593,824 bytes
+Computed distance sum: 2279877.0
+&gt; Total peak memory for graph and analysis: 33,596,252 bytes
+-- RetworkX runtime --
+&gt; Time for graph definition: 1.625 seconds
+&gt; Time for graph and analysis: 1.973 seconds
+
+---- Test run number 1  ----
+-- RetworkX runtime --
+&gt; Time for graph definition: 1.626 seconds
+&gt; Time for graph and analysis: 1.971 seconds
+
+---- Test run number 2  ----
+-- RetworkX runtime --
+&gt; Time for graph definition: 1.623 seconds
+&gt; Time for graph and analysis: 1.973 seconds
+
+---- Test run number 3  ----
+-- RetworkX runtime --
+&gt; Time for graph definition: 1.625 seconds
+&gt; Time for graph and analysis: 1.976 seconds
+
+---- Test run number 4  ----
+-- RetworkX runtime --
+&gt; Time for graph definition: 1.618 seconds
+&gt; Time for graph and analysis: 1.964 seconds
+
+
+---- Test run number 0  ----
+-- NetworkX memory --
+&gt; Peak memory for graph definition: 1,417,016,696 bytes
+Computed distance sum: 2279877.0
+&gt; Total peak memory for graph and analysis: 1,541,442,000 bytes
+-- NetworkX runtime --
+&gt; Time for graph definition: 8.857 seconds
+&gt; Time for graph and analysis: 11.601 seconds
+
+---- Test run number 1  ----
+-- NetworkX runtime --
+&gt; Time for graph definition: 8.865 seconds
+&gt; Time for graph and analysis: 11.642 seconds
+
+---- Test run number 2  ----
+-- NetworkX runtime --
+&gt; Time for graph definition: 8.799 seconds
+&gt; Time for graph and analysis: 11.520 seconds
+
+---- Test run number 3  ----
+-- NetworkX runtime --
+&gt; Time for graph definition: 8.857 seconds
+&gt; Time for graph and analysis: 11.597 seconds
+
+---- Test run number 4  ----
+-- NetworkX runtime --
+&gt; Time for graph definition: 8.797 seconds
+&gt; Time for graph and analysis: 11.530 seconds
+
+
++-----------+-------+--------+--------------------------------+
+| lib+gear  | runtime (sec.) |   peak memory (bytes)          |
++-----------+-------+--------+---------------+----------------+
+|           | graph |  total |     graph     |     total      |
++===========+=======+========+===============+================+
+| NoGraphs  | _0.00 | __2.45 | ____________0 | ____82,489,608 |
++-----------+-------+--------+---------------+----------------+
+| nog&#64;IntId | _0.00 | __2.04 | ____________0 | _____9,619,092 |
++-----------+-------+--------+---------------+----------------+
+| &#64;IntIdA0B |  n.a. |   n.a. |          n.a. |           n.a. |
++-----------+-------+--------+---------------+----------------+
+| &#64;IntIdL0B | _0.00 | __2.04 | ____________0 | _____9,616,420 |
++-----------+-------+--------+---------------+----------------+
+| &#64;IntIdF   | _0.00 | __2.28 | ____________0 | _____4,915,489 |
++-----------+-------+--------+---------------+----------------+
+| &#64;IntIdF0B |  n.a. |   n.a. |          n.a. |           n.a. |
++-----------+-------+--------+---------------+----------------+
+| nog&#64;Int   | _0.00 | __2.05 | ____________0 | _____9,616,420 |
++-----------+-------+--------+---------------+----------------+
+| &#64;IntF     | _0.00 | __2.28 | ____________0 | _____4,915,089 |
++-----------+-------+--------+---------------+----------------+
+| &#64;IntF0B   |  n.a. |   n.a. |          n.a. |           n.a. |
++-----------+-------+--------+---------------+----------------+
+| nog+intset| _0.00 | __2.27 | ____________0 | _____4,915,089 |
++-----------+-------+--------+---------------+----------------+
+| nog+shift |  n.a. |   n.a. |          n.a. |           n.a. |
++-----------+-------+--------+---------------+----------------+
+| igraph    | 13.82 | _14.34 | ___21,530,892 | ____21,530,892 |
++-----------+-------+--------+---------------+----------------+
+| RetworkX  | _1.62 | __1.97 | ___33,593,824 | ____33,596,252 |
++-----------+-------+--------+---------------+----------------+
+| NetworkX  | _8.86 | _11.60 | 1,417,016,696 | _1,541,442,000 |
++-----------+-------+--------+---------------+----------------+
+
+
+===== Test case: Dijkstra distances, 3,6 M vertices, 1 goal, 1/3 regarded =====
+---- Test run number 0  ----
+-- NoGraphs memory --
+Computed distance sum: 816670.0
+&gt; Total peak memory for graph and analysis: 82,494,776 bytes
+-- NoGraphs runtime --
+&gt; Time for graph and analysis: 2.434 seconds
+
+---- Test run number 1  ----
+-- NoGraphs runtime --
+&gt; Time for graph and analysis: 2.436 seconds
+
+---- Test run number 2  ----
+-- NoGraphs runtime --
+&gt; Time for graph and analysis: 2.448 seconds
+
+---- Test run number 3  ----
+-- NoGraphs runtime --
+&gt; Time for graph and analysis: 2.439 seconds
+
+---- Test run number 4  ----
+-- NoGraphs runtime --
+&gt; Time for graph and analysis: 2.434 seconds
+
+
+---- Test run number 0  ----
+-- nog&#64;IntId memory --
+Computed distance sum: 816670.0
+&gt; Total peak memory for graph and analysis: 19,482,160 bytes
+-- nog&#64;IntId runtime --
+&gt; Time for graph and analysis: 2.037 seconds
+
+---- Test run number 1  ----
+-- nog&#64;IntId runtime --
+&gt; Time for graph and analysis: 2.025 seconds
+
+---- Test run number 2  ----
+-- nog&#64;IntId runtime --
+&gt; Time for graph and analysis: 2.027 seconds
+
+---- Test run number 3  ----
+-- nog&#64;IntId runtime --
+&gt; Time for graph and analysis: 2.030 seconds
+
+---- Test run number 4  ----
+-- nog&#64;IntId runtime --
+&gt; Time for graph and analysis: 2.033 seconds
+
+
+
+---- Test run number 0  ----
+-- &#64;IntIdL0B memory --
+Computed distance sum: 816670.0
+&gt; Total peak memory for graph and analysis: 19,482,160 bytes
+-- &#64;IntIdL0B runtime --
+&gt; Time for graph and analysis: 2.031 seconds
+
+---- Test run number 1  ----
+-- &#64;IntIdL0B runtime --
+&gt; Time for graph and analysis: 2.037 seconds
+
+---- Test run number 2  ----
+-- &#64;IntIdL0B runtime --
+&gt; Time for graph and analysis: 2.031 seconds
+
+---- Test run number 3  ----
+-- &#64;IntIdL0B runtime --
+&gt; Time for graph and analysis: 2.029 seconds
+
+---- Test run number 4  ----
+-- &#64;IntIdL0B runtime --
+&gt; Time for graph and analysis: 2.027 seconds
+
+
+---- Test run number 0  ----
+-- &#64;IntIdF memory --
+Computed distance sum: 816670.0
+&gt; Total peak memory for graph and analysis: 10,166,713 bytes
+-- &#64;IntIdF runtime --
+&gt; Time for graph and analysis: 2.344 seconds
+
+---- Test run number 1  ----
+-- &#64;IntIdF runtime --
+&gt; Time for graph and analysis: 2.346 seconds
+
+---- Test run number 2  ----
+-- &#64;IntIdF runtime --
+&gt; Time for graph and analysis: 2.354 seconds
+
+---- Test run number 3  ----
+-- &#64;IntIdF runtime --
+&gt; Time for graph and analysis: 2.349 seconds
+
+---- Test run number 4  ----
+-- &#64;IntIdF runtime --
+&gt; Time for graph and analysis: 2.349 seconds
+
+
+
+---- Test run number 0  ----
+-- nog&#64;Int memory --
+Computed distance sum: 816670.0
+&gt; Total peak memory for graph and analysis: 19,482,160 bytes
+-- nog&#64;Int runtime --
+&gt; Time for graph and analysis: 2.035 seconds
+
+---- Test run number 1  ----
+-- nog&#64;Int runtime --
+&gt; Time for graph and analysis: 2.035 seconds
+
+---- Test run number 2  ----
+-- nog&#64;Int runtime --
+&gt; Time for graph and analysis: 2.026 seconds
+
+---- Test run number 3  ----
+-- nog&#64;Int runtime --
+&gt; Time for graph and analysis: 2.034 seconds
+
+---- Test run number 4  ----
+-- nog&#64;Int runtime --
+&gt; Time for graph and analysis: 2.040 seconds
+
+
+---- Test run number 0  ----
+-- &#64;IntF memory --
+Computed distance sum: 816670.0
+&gt; Total peak memory for graph and analysis: 10,166,713 bytes
+-- &#64;IntF runtime --
+&gt; Time for graph and analysis: 2.345 seconds
+
+---- Test run number 1  ----
+-- &#64;IntF runtime --
+&gt; Time for graph and analysis: 2.355 seconds
+
+---- Test run number 2  ----
+-- &#64;IntF runtime --
+&gt; Time for graph and analysis: 2.343 seconds
+
+---- Test run number 3  ----
+-- &#64;IntF runtime --
+&gt; Time for graph and analysis: 2.345 seconds
+
+---- Test run number 4  ----
+-- &#64;IntF runtime --
+&gt; Time for graph and analysis: 2.341 seconds
+
+
+
+---- Test run number 0  ----
+-- nog+intset memory --
+Computed distance sum: 816670.0
+&gt; Total peak memory for graph and analysis: 10,166,713 bytes
+-- nog+intset runtime --
+&gt; Time for graph and analysis: 2.346 seconds
+
+---- Test run number 1  ----
+-- nog+intset runtime --
+&gt; Time for graph and analysis: 2.346 seconds
+
+---- Test run number 2  ----
+-- nog+intset runtime --
+&gt; Time for graph and analysis: 2.349 seconds
+
+---- Test run number 3  ----
+-- nog+intset runtime --
+&gt; Time for graph and analysis: 2.343 seconds
+
+---- Test run number 4  ----
+-- nog+intset runtime --
+&gt; Time for graph and analysis: 2.348 seconds
+
+
+---- Test run number 0  ----
+-- nog+shift memory --
+Computed distance sum: 816670.0
+&gt; Total peak memory for graph and analysis: 4,916,593 bytes
+-- nog+shift runtime --
+&gt; Time for graph and analysis: 2.799 seconds
+
+---- Test run number 1  ----
+-- nog+shift runtime --
+&gt; Time for graph and analysis: 2.740 seconds
+
+---- Test run number 2  ----
+-- nog+shift runtime --
+&gt; Time for graph and analysis: 2.744 seconds
+
+---- Test run number 3  ----
+-- nog+shift runtime --
+&gt; Time for graph and analysis: 2.864 seconds
+
+---- Test run number 4  ----
+-- nog+shift runtime --
+&gt; Time for graph and analysis: 2.745 seconds
+
+
+---- Test run number 0  ----
+-- igraph memory --
+&gt; Peak memory for graph definition: 59,975,244 bytes
+Computed distance sum: 816670.0
+&gt; Total peak memory for graph and analysis: 59,975,244 bytes
+-- igraph runtime --
+&gt; Time for graph definition: 110.159 seconds
+&gt; Time for graph and analysis: 110.791 seconds
+
+---- Test run number 1  ----
+-- igraph runtime --
+&gt; Time for graph definition: 110.152 seconds
+&gt; Time for graph and analysis: 110.768 seconds
+
+---- Test run number 2  ----
+-- igraph runtime --
+&gt; Time for graph definition: 110.296 seconds
+&gt; Time for graph and analysis: 110.897 seconds
+
+---- Test run number 3  ----
+-- igraph runtime --
+&gt; Time for graph definition: 111.354 seconds
+&gt; Time for graph and analysis: 111.987 seconds
+
+---- Test run number 4  ----
+-- igraph runtime --
+&gt; Time for graph definition: 110.383 seconds
+&gt; Time for graph and analysis: 110.986 seconds
+
+
+---- Test run number 0  ----
+-- RetworkX memory --
+&gt; Peak memory for graph definition: 100,793,656 bytes
+Computed distance sum: 816670.0
+&gt; Total peak memory for graph and analysis: 100,794,448 bytes
+-- RetworkX runtime --
+&gt; Time for graph definition: 4.893 seconds
+&gt; Time for graph and analysis: 5.655 seconds
+
+---- Test run number 1  ----
+-- RetworkX runtime --
+&gt; Time for graph definition: 4.890 seconds
+&gt; Time for graph and analysis: 5.656 seconds
+
+---- Test run number 2  ----
+-- RetworkX runtime --
+&gt; Time for graph definition: 4.900 seconds
+&gt; Time for graph and analysis: 5.672 seconds
+
+---- Test run number 3  ----
+-- RetworkX runtime --
+&gt; Time for graph definition: 4.866 seconds
+&gt; Time for graph and analysis: 5.627 seconds
+
+---- Test run number 4  ----
+-- RetworkX runtime --
+&gt; Time for graph definition: 4.871 seconds
+&gt; Time for graph and analysis: 5.636 seconds
+
+
+
++-----------+-------+--------+--------------------------------+
+| lib+gear  | runtime (sec.) |   peak memory (bytes)          |
++-----------+-------+--------+---------------+----------------+
+|           | graph |  total |     graph     |     total      |
++===========+=======+========+===============+================+
+| NoGraphs  | _0.00 | __2.44 | ____________0 | ____82,494,776 |
++-----------+-------+--------+---------------+----------------+
+| nog&#64;IntId | _0.00 | __2.03 | ____________0 | ____19,482,160 |
++-----------+-------+--------+---------------+----------------+
+| &#64;IntIdA0B |  n.a. |   n.a. |          n.a. |           n.a. |
++-----------+-------+--------+---------------+----------------+
+| &#64;IntIdL0B | _0.00 | __2.03 | ____________0 | ____19,482,160 |
++-----------+-------+--------+---------------+----------------+
+| &#64;IntIdF   | _0.00 | __2.35 | ____________0 | ____10,166,713 |
++-----------+-------+--------+---------------+----------------+
+| &#64;IntIdF0B |  n.a. |   n.a. |          n.a. |           n.a. |
++-----------+-------+--------+---------------+----------------+
+| nog&#64;Int   | _0.00 | __2.04 | ____________0 | ____19,482,160 |
++-----------+-------+--------+---------------+----------------+
+| &#64;IntF     | _0.00 | __2.35 | ____________0 | ____10,166,713 |
++-----------+-------+--------+---------------+----------------+
+| &#64;IntF0B   |  n.a. |   n.a. |          n.a. |           n.a. |
++-----------+-------+--------+---------------+----------------+
+| nog+intset| _0.00 | __2.35 | ____________0 | ____10,166,713 |
++-----------+-------+--------+---------------+----------------+
+| nog+shift | _0.00 | __2.75 | ____________0 | _____4,916,593 |
++-----------+-------+--------+---------------+----------------+
+| igraph    |110.30 | 110.90 | ___59,975,244 | ____59,975,244 |
++-----------+-------+--------+---------------+----------------+
+| RetworkX  | _4.89 | __5.66 | __100,793,656 | ___100,794,448 |
++-----------+-------+--------+---------------+----------------+
+| NetworkX  |  n.a. |   n.a. |          n.a. |           n.a. |
++-----------+-------+--------+---------------+----------------+
+
+
+===== Test case: Dijkstra distances, 1,2 M vertices, 3 goals, executed 3 times =====
+---- Test run number 0  ----
+-- NoGraphs memory --
+Computed distance sums: 2279877.0 2279877.0 2279877.0
+&gt; Total peak memory for graph and analysis: 82,488,320 bytes
+-- NoGraphs runtime --
+&gt; Time for graph and analysis: 7.340 seconds
+
+---- Test run number 1  ----
+-- NoGraphs runtime --
+&gt; Time for graph and analysis: 7.314 seconds
+
+---- Test run number 2  ----
+-- NoGraphs runtime --
+&gt; Time for graph and analysis: 7.316 seconds
+
+---- Test run number 3  ----
+-- NoGraphs runtime --
+&gt; Time for graph and analysis: 7.344 seconds
+
+---- Test run number 4  ----
+-- NoGraphs runtime --
+&gt; Time for graph and analysis: 7.333 seconds
+
+
+---- Test run number 0  ----
+-- nog&#64;IntId memory --
+Computed distance sums: 2279877.0 2279877.0 2279877.0
+&gt; Total peak memory for graph and analysis: 9,617,068 bytes
+-- nog&#64;IntId runtime --
+&gt; Time for graph and analysis: 6.077 seconds
+
+---- Test run number 1  ----
+-- nog&#64;IntId runtime --
+&gt; Time for graph and analysis: 6.063 seconds
+
+---- Test run number 2  ----
+-- nog&#64;IntId runtime --
+&gt; Time for graph and analysis: 6.083 seconds
+
+---- Test run number 3  ----
+-- nog&#64;IntId runtime --
+&gt; Time for graph and analysis: 6.079 seconds
+
+---- Test run number 4  ----
+-- nog&#64;IntId runtime --
+&gt; Time for graph and analysis: 6.086 seconds
+
+
+
+---- Test run number 0  ----
+-- &#64;IntIdL0B memory --
+Computed distance sums: 2279877.0 2279877.0 2279877.0
+&gt; Total peak memory for graph and analysis: 9,617,068 bytes
+-- &#64;IntIdL0B runtime --
+&gt; Time for graph and analysis: 6.109 seconds
+
+---- Test run number 1  ----
+-- &#64;IntIdL0B runtime --
+&gt; Time for graph and analysis: 6.067 seconds
+
+---- Test run number 2  ----
+-- &#64;IntIdL0B runtime --
+&gt; Time for graph and analysis: 6.083 seconds
+
+---- Test run number 3  ----
+-- &#64;IntIdL0B runtime --
+&gt; Time for graph and analysis: 6.068 seconds
+
+---- Test run number 4  ----
+-- &#64;IntIdL0B runtime --
+&gt; Time for graph and analysis: 6.077 seconds
+
+
+---- Test run number 0  ----
+-- &#64;IntIdF memory --
+Computed distance sums: 2279877.0 2279877.0 2279877.0
+&gt; Total peak memory for graph and analysis: 4,915,729 bytes
+-- &#64;IntIdF runtime --
+&gt; Time for graph and analysis: 6.780 seconds
+
+---- Test run number 1  ----
+-- &#64;IntIdF runtime --
+&gt; Time for graph and analysis: 6.807 seconds
+
+---- Test run number 2  ----
+-- &#64;IntIdF runtime --
+&gt; Time for graph and analysis: 6.838 seconds
+
+---- Test run number 3  ----
+-- &#64;IntIdF runtime --
+&gt; Time for graph and analysis: 6.785 seconds
+
+---- Test run number 4  ----
+-- &#64;IntIdF runtime --
+&gt; Time for graph and analysis: 6.795 seconds
+
+
+
+---- Test run number 0  ----
+-- nog&#64;Int memory --
+Computed distance sums: 2279877.0 2279877.0 2279877.0
+&gt; Total peak memory for graph and analysis: 9,617,068 bytes
+-- nog&#64;Int runtime --
+&gt; Time for graph and analysis: 6.069 seconds
+
+---- Test run number 1  ----
+-- nog&#64;Int runtime --
+&gt; Time for graph and analysis: 6.074 seconds
+
+---- Test run number 2  ----
+-- nog&#64;Int runtime --
+&gt; Time for graph and analysis: 6.064 seconds
+
+---- Test run number 3  ----
+-- nog&#64;Int runtime --
+&gt; Time for graph and analysis: 6.071 seconds
+
+---- Test run number 4  ----
+-- nog&#64;Int runtime --
+&gt; Time for graph and analysis: 6.079 seconds
+
+
+---- Test run number 0  ----
+-- &#64;IntF memory --
+Computed distance sums: 2279877.0 2279877.0 2279877.0
+&gt; Total peak memory for graph and analysis: 4,915,729 bytes
+-- &#64;IntF runtime --
+&gt; Time for graph and analysis: 6.783 seconds
+
+---- Test run number 1  ----
+-- &#64;IntF runtime --
+&gt; Time for graph and analysis: 6.794 seconds
+
+---- Test run number 2  ----
+-- &#64;IntF runtime --
+&gt; Time for graph and analysis: 6.796 seconds
+
+---- Test run number 3  ----
+-- &#64;IntF runtime --
+&gt; Time for graph and analysis: 6.806 seconds
+
+---- Test run number 4  ----
+-- &#64;IntF runtime --
+&gt; Time for graph and analysis: 6.806 seconds
+
+
+
+---- Test run number 0  ----
+-- nog+intset memory --
+Computed distance sums: 2279877.0 2279877.0 2279877.0
+&gt; Total peak memory for graph and analysis: 4,915,729 bytes
+-- nog+intset runtime --
+&gt; Time for graph and analysis: 6.787 seconds
+
+---- Test run number 1  ----
+-- nog+intset runtime --
+&gt; Time for graph and analysis: 6.788 seconds
+
+---- Test run number 2  ----
+-- nog+intset runtime --
+&gt; Time for graph and analysis: 6.793 seconds
+
+---- Test run number 3  ----
+-- nog+intset runtime --
+&gt; Time for graph and analysis: 6.801 seconds
+
+---- Test run number 4  ----
+-- nog+intset runtime --
+&gt; Time for graph and analysis: 6.796 seconds
+
+
+
+---- Test run number 0  ----
+-- igraph memory --
+&gt; Peak memory for graph definition: 21,530,892 bytes
+Computed distance sums: 2279877.0 2279877.0 2279877.0
+&gt; Total peak memory for graph and analysis: 21,530,892 bytes
+-- igraph runtime --
+&gt; Time for graph definition: 13.185 seconds
+&gt; Time for graph and analysis: 14.640 seconds
+
+---- Test run number 1  ----
+-- igraph runtime --
+&gt; Time for graph definition: 13.157 seconds
+&gt; Time for graph and analysis: 14.611 seconds
+
+---- Test run number 2  ----
+-- igraph runtime --
+&gt; Time for graph definition: 13.199 seconds
+&gt; Time for graph and analysis: 14.653 seconds
+
+---- Test run number 3  ----
+-- igraph runtime --
+&gt; Time for graph definition: 13.172 seconds
+&gt; Time for graph and analysis: 14.629 seconds
+
+---- Test run number 4  ----
+-- igraph runtime --
+&gt; Time for graph definition: 13.061 seconds
+&gt; Time for graph and analysis: 14.507 seconds
+
+
+---- Test run number 0  ----
+-- RetworkX memory --
+&gt; Peak memory for graph definition: 33,593,824 bytes
+Computed distance sums: 2279877.0 2279877.0 2279877.0
+&gt; Total peak memory for graph and analysis: 33,594,756 bytes
+-- RetworkX runtime --
+&gt; Time for graph definition: 1.617 seconds
+&gt; Time for graph and analysis: 2.573 seconds
+
+---- Test run number 1  ----
+-- RetworkX runtime --
+&gt; Time for graph definition: 1.627 seconds
+&gt; Time for graph and analysis: 2.579 seconds
+
+---- Test run number 2  ----
+-- RetworkX runtime --
+&gt; Time for graph definition: 1.631 seconds
+&gt; Time for graph and analysis: 2.589 seconds
+
+---- Test run number 3  ----
+-- RetworkX runtime --
+&gt; Time for graph definition: 1.628 seconds
+&gt; Time for graph and analysis: 2.574 seconds
+
+---- Test run number 4  ----
+-- RetworkX runtime --
+&gt; Time for graph definition: 1.620 seconds
+&gt; Time for graph and analysis: 2.576 seconds
+
+
+
++-----------+-------+--------+--------------------------------+
+| lib+gear  | runtime (sec.) |   peak memory (bytes)          |
++-----------+-------+--------+---------------+----------------+
+|           | graph |  total |     graph     |     total      |
++===========+=======+========+===============+================+
+| NoGraphs  | _0.00 | __7.33 | ____________0 | ____82,488,320 |
++-----------+-------+--------+---------------+----------------+
+| nog&#64;IntId | _0.00 | __6.08 | ____________0 | _____9,617,068 |
++-----------+-------+--------+---------------+----------------+
+| &#64;IntIdA0B |  n.a. |   n.a. |          n.a. |           n.a. |
++-----------+-------+--------+---------------+----------------+
+| &#64;IntIdL0B | _0.00 | __6.08 | ____________0 | _____9,617,068 |
++-----------+-------+--------+---------------+----------------+
+| &#64;IntIdF   | _0.00 | __6.79 | ____________0 | _____4,915,729 |
++-----------+-------+--------+---------------+----------------+
+| &#64;IntIdF0B |  n.a. |   n.a. |          n.a. |           n.a. |
++-----------+-------+--------+---------------+----------------+
+| nog&#64;Int   | _0.00 | __6.07 | ____________0 | _____9,617,068 |
++-----------+-------+--------+---------------+----------------+
+| &#64;IntF     | _0.00 | __6.80 | ____________0 | _____4,915,729 |
++-----------+-------+--------+---------------+----------------+
+| &#64;IntF0B   |  n.a. |   n.a. |          n.a. |           n.a. |
++-----------+-------+--------+---------------+----------------+
+| nog+intset| _0.00 | __6.79 | ____________0 | _____4,915,729 |
++-----------+-------+--------+---------------+----------------+
+| nog+shift |  n.a. |   n.a. |          n.a. |           n.a. |
++-----------+-------+--------+---------------+----------------+
+| igraph    | 13.17 | _14.63 | ___21,530,892 | ____21,530,892 |
++-----------+-------+--------+---------------+----------------+
+| RetworkX  | _1.63 | __2.58 | ___33,593,824 | ____33,594,756 |
++-----------+-------+--------+---------------+----------------+
+| NetworkX  |  n.a. |   n.a. |          n.a. |           n.a. |
++-----------+-------+--------+---------------+----------------+
+
+
+===== Test case: Dijkstra path and distance, 1,2 M vertices, 1 goal =====
+---- Test run number 0  ----
+-- NoGraphs memory --
+Computed distance sum: 816674.0
+Computed vertex count of path: 283,331
+Start and end of found path: (0, 1, 2, 8, 14) ... (1199976, 1199982, 1199988, 1199994, 1200000)
+Computed distance sum: 816674.0
+&gt; Total peak memory for graph and analysis: 126,332,524 bytes
+-- NoGraphs runtime --
+&gt; Time for graph and analysis: 2.623 seconds
+
+---- Test run number 1  ----
+-- NoGraphs runtime --
+&gt; Time for graph and analysis: 2.624 seconds
+
+---- Test run number 2  ----
+-- NoGraphs runtime --
+&gt; Time for graph and analysis: 2.620 seconds
+
+---- Test run number 3  ----
+-- NoGraphs runtime --
+&gt; Time for graph and analysis: 2.613 seconds
+
+---- Test run number 4  ----
+-- NoGraphs runtime --
+&gt; Time for graph and analysis: 2.619 seconds
+
+
+---- Test run number 0  ----
+-- nog&#64;IntId memory --
+Computed distance sum: 816674.0
+Computed vertex count of path: 283,331
+Start and end of found path: (0, 1, 2, 8, 14) ... (1199976, 1199982, 1199988, 1199994, 1200000)
+Computed distance sum: 816674.0
+&gt; Total peak memory for graph and analysis: 46,153,544 bytes
+-- nog&#64;IntId runtime --
+&gt; Time for graph and analysis: 2.198 seconds
+
+---- Test run number 1  ----
+-- nog&#64;IntId runtime --
+&gt; Time for graph and analysis: 2.187 seconds
+
+---- Test run number 2  ----
+-- nog&#64;IntId runtime --
+&gt; Time for graph and analysis: 2.189 seconds
+
+---- Test run number 3  ----
+-- nog&#64;IntId runtime --
+&gt; Time for graph and analysis: 2.192 seconds
+
+---- Test run number 4  ----
+-- nog&#64;IntId runtime --
+&gt; Time for graph and analysis: 2.183 seconds
+
+
+
+---- Test run number 0  ----
+-- &#64;IntIdL0B memory --
+Computed distance sum: 816674.0
+Computed vertex count of path: 283,331
+Start and end of found path: (0, 1, 2, 8, 14) ... (1199976, 1199982, 1199988, 1199994, 1200000)
+Computed distance sum: 816674.0
+&gt; Total peak memory for graph and analysis: 46,153,544 bytes
+-- &#64;IntIdL0B runtime --
+&gt; Time for graph and analysis: 2.209 seconds
+
+---- Test run number 1  ----
+-- &#64;IntIdL0B runtime --
+&gt; Time for graph and analysis: 2.199 seconds
+
+---- Test run number 2  ----
+-- &#64;IntIdL0B runtime --
+&gt; Time for graph and analysis: 2.196 seconds
+
+---- Test run number 3  ----
+-- &#64;IntIdL0B runtime --
+&gt; Time for graph and analysis: 2.186 seconds
+
+---- Test run number 4  ----
+-- &#64;IntIdL0B runtime --
+&gt; Time for graph and analysis: 2.200 seconds
+
+
+---- Test run number 0  ----
+-- &#64;IntIdF memory --
+Computed distance sum: 816674.0
+Computed vertex count of path: 283,331
+Start and end of found path: (0, 1, 2, 8, 14) ... (1199976, 1199982, 1199988, 1199994, 1200000)
+Computed distance sum: 816674.0
+&gt; Total peak memory for graph and analysis: 41,452,352 bytes
+-- &#64;IntIdF runtime --
+&gt; Time for graph and analysis: 2.430 seconds
+
+---- Test run number 1  ----
+-- &#64;IntIdF runtime --
+&gt; Time for graph and analysis: 2.430 seconds
+
+---- Test run number 2  ----
+-- &#64;IntIdF runtime --
+&gt; Time for graph and analysis: 2.427 seconds
+
+---- Test run number 3  ----
+-- &#64;IntIdF runtime --
+&gt; Time for graph and analysis: 2.427 seconds
+
+---- Test run number 4  ----
+-- &#64;IntIdF runtime --
+&gt; Time for graph and analysis: 2.428 seconds
+
+
+
+---- Test run number 0  ----
+-- nog&#64;Int memory --
+Computed distance sum: 816674.0
+Computed vertex count of path: 283,331
+Start and end of found path: (0, 1, 2, 8, 14) ... (1199976, 1199982, 1199988, 1199994, 1200000)
+Computed distance sum: 816674.0
+&gt; Total peak memory for graph and analysis: 26,988,580 bytes
+-- nog&#64;Int runtime --
+&gt; Time for graph and analysis: 2.225 seconds
+
+---- Test run number 1  ----
+-- nog&#64;Int runtime --
+&gt; Time for graph and analysis: 2.215 seconds
+
+---- Test run number 2  ----
+-- nog&#64;Int runtime --
+&gt; Time for graph and analysis: 2.214 seconds
+
+---- Test run number 3  ----
+-- nog&#64;Int runtime --
+&gt; Time for graph and analysis: 2.219 seconds
+
+---- Test run number 4  ----
+-- nog&#64;Int runtime --
+&gt; Time for graph and analysis: 2.221 seconds
+
+
+---- Test run number 0  ----
+-- &#64;IntF memory --
+Computed distance sum: 816674.0
+Computed vertex count of path: 283,331
+Start and end of found path: (0, 1, 2, 8, 14) ... (1199976, 1199982, 1199988, 1199994, 1200000)
+Computed distance sum: 816674.0
+&gt; Total peak memory for graph and analysis: 22,287,388 bytes
+-- &#64;IntF runtime --
+&gt; Time for graph and analysis: 2.456 seconds
+
+---- Test run number 1  ----
+-- &#64;IntF runtime --
+&gt; Time for graph and analysis: 2.445 seconds
+
+---- Test run number 2  ----
+-- &#64;IntF runtime --
+&gt; Time for graph and analysis: 2.451 seconds
+
+---- Test run number 3  ----
+-- &#64;IntF runtime --
+&gt; Time for graph and analysis: 2.438 seconds
+
+---- Test run number 4  ----
+-- &#64;IntF runtime --
+&gt; Time for graph and analysis: 2.459 seconds
+
+
+
+---- Test run number 0  ----
+-- nog+intset memory --
+Computed distance sum: 816674.0
+Computed vertex count of path: 283,331
+Start and end of found path: (0, 1, 2, 8, 14) ... (1199976, 1199982, 1199988, 1199994, 1200000)
+Computed distance sum: 816674.0
+&gt; Total peak memory for graph and analysis: 22,287,388 bytes
+-- nog+intset runtime --
+&gt; Time for graph and analysis: 2.634 seconds
+
+---- Test run number 1  ----
+-- nog+intset runtime --
+&gt; Time for graph and analysis: 2.630 seconds
+
+---- Test run number 2  ----
+-- nog+intset runtime --
+&gt; Time for graph and analysis: 2.630 seconds
+
+---- Test run number 3  ----
+-- nog+intset runtime --
+&gt; Time for graph and analysis: 2.635 seconds
+
+---- Test run number 4  ----
+-- nog+intset runtime --
+&gt; Time for graph and analysis: 2.632 seconds
+
+
+
+---- Test run number 0  ----
+-- igraph memory --
+&gt; Peak memory for graph definition: 21,530,892 bytes
+Computed distance sum: -1.0
+Computed vertex count of path: 283,331
+Start and end of found path: (0, 1, 2, 8, 14) ... (1199976, 1199982, 1199988, 1199994, 1200000)
+Distance not computed
+&gt; Total peak memory for graph and analysis: 30,690,568 bytes
+-- igraph runtime --
+&gt; Time for graph definition: 13.248 seconds
+&gt; Time for graph and analysis: 13.769 seconds
+
+---- Test run number 1  ----
+-- igraph runtime --
+&gt; Time for graph definition: 13.308 seconds
+&gt; Time for graph and analysis: 13.834 seconds
+
+---- Test run number 2  ----
+-- igraph runtime --
+&gt; Time for graph definition: 13.220 seconds
+&gt; Time for graph and analysis: 13.780 seconds
+
+---- Test run number 3  ----
+-- igraph runtime --
+&gt; Time for graph definition: 13.244 seconds
+&gt; Time for graph and analysis: 13.781 seconds
+
+---- Test run number 4  ----
+-- igraph runtime --
+&gt; Time for graph definition: 13.271 seconds
+&gt; Time for graph and analysis: 13.817 seconds
+
+
+
+
++-----------+-------+--------+--------------------------------+
+| lib+gear  | runtime (sec.) |   peak memory (bytes)          |
++-----------+-------+--------+---------------+----------------+
+|           | graph |  total |     graph     |     total      |
++===========+=======+========+===============+================+
+| NoGraphs  | _0.00 | __2.62 | ____________0 | ___126,332,524 |
++-----------+-------+--------+---------------+----------------+
+| nog&#64;IntId | _0.00 | __2.19 | ____________0 | ____46,153,544 |
++-----------+-------+--------+---------------+----------------+
+| &#64;IntIdA0B |  n.a. |   n.a. |          n.a. |           n.a. |
++-----------+-------+--------+---------------+----------------+
+| &#64;IntIdL0B | _0.00 | __2.20 | ____________0 | ____46,153,544 |
++-----------+-------+--------+---------------+----------------+
+| &#64;IntIdF   | _0.00 | __2.43 | ____________0 | ____41,452,352 |
++-----------+-------+--------+---------------+----------------+
+| &#64;IntIdF0B |  n.a. |   n.a. |          n.a. |           n.a. |
++-----------+-------+--------+---------------+----------------+
+| nog&#64;Int   | _0.00 | __2.22 | ____________0 | ____26,988,580 |
++-----------+-------+--------+---------------+----------------+
+| &#64;IntF     | _0.00 | __2.45 | ____________0 | ____22,287,388 |
++-----------+-------+--------+---------------+----------------+
+| &#64;IntF0B   |  n.a. |   n.a. |          n.a. |           n.a. |
++-----------+-------+--------+---------------+----------------+
+| nog+intset| _0.00 | __2.63 | ____________0 | ____22,287,388 |
++-----------+-------+--------+---------------+----------------+
+| nog+shift |  n.a. |   n.a. |          n.a. |           n.a. |
++-----------+-------+--------+---------------+----------------+
+| igraph    | 13.25 | _13.78 | ___21,530,892 | ____30,690,568 |
++-----------+-------+--------+---------------+----------------+
+| RetworkX  |  n.a. |   n.a. |          n.a. |           n.a. |
++-----------+-------+--------+---------------+----------------+
+| NetworkX  |  n.a. |   n.a. |          n.a. |           n.a. |
++-----------+-------+--------+---------------+----------------+
+
+
+===== Test case: Dijkstra path and distance, 100 T vertices, 1 goal =====
+---- Test run number 0  ----
+-- NoGraphs memory --
+Computed distance sum: 68061.0
+Computed vertex count of path: 23,611
+Start and end of found path: (0, 1, 2, 8, 14) ... (99976, 99982, 99988, 99994)
+Computed distance sum: 68061.0
+&gt; Total peak memory for graph and analysis: 15,793,736 bytes
+-- NoGraphs runtime --
+&gt; Time for graph and analysis: 0.226 seconds
+
+---- Test run number 1  ----
+-- NoGraphs runtime --
+&gt; Time for graph and analysis: 0.222 seconds
+
+---- Test run number 2  ----
+-- NoGraphs runtime --
+&gt; Time for graph and analysis: 0.226 seconds
+
+---- Test run number 3  ----
+-- NoGraphs runtime --
+&gt; Time for graph and analysis: 0.223 seconds
+
+---- Test run number 4  ----
+-- NoGraphs runtime --
+&gt; Time for graph and analysis: 0.223 seconds
+
+
+---- Test run number 0  ----
+-- nog&#64;IntId memory --
+Computed distance sum: 68061.0
+Computed vertex count of path: 23,611
+Start and end of found path: (0, 1, 2, 8, 14) ... (99976, 99982, 99988, 99994)
+Computed distance sum: 68061.0
+&gt; Total peak memory for graph and analysis: 4,004,268 bytes
+-- nog&#64;IntId runtime --
+&gt; Time for graph and analysis: 0.180 seconds
+
+---- Test run number 1  ----
+-- nog&#64;IntId runtime --
+&gt; Time for graph and analysis: 0.188 seconds
+
+---- Test run number 2  ----
+-- nog&#64;IntId runtime --
+&gt; Time for graph and analysis: 0.180 seconds
+
+---- Test run number 3  ----
+-- nog&#64;IntId runtime --
+&gt; Time for graph and analysis: 0.181 seconds
+
+---- Test run number 4  ----
+-- nog&#64;IntId runtime --
+&gt; Time for graph and analysis: 0.180 seconds
+
+
+
+---- Test run number 0  ----
+-- &#64;IntIdL0B memory --
+Computed distance sum: 68061.0
+Computed vertex count of path: 23,611
+Start and end of found path: (0, 1, 2, 8, 14) ... (99976, 99982, 99988, 99994)
+Computed distance sum: 68061.0
+&gt; Total peak memory for graph and analysis: 4,002,956 bytes
+-- &#64;IntIdL0B runtime --
+&gt; Time for graph and analysis: 0.179 seconds
+
+---- Test run number 1  ----
+-- &#64;IntIdL0B runtime --
+&gt; Time for graph and analysis: 0.186 seconds
+
+---- Test run number 2  ----
+-- &#64;IntIdL0B runtime --
+&gt; Time for graph and analysis: 0.181 seconds
+
+---- Test run number 3  ----
+-- &#64;IntIdL0B runtime --
+&gt; Time for graph and analysis: 0.184 seconds
+
+---- Test run number 4  ----
+-- &#64;IntIdL0B runtime --
+&gt; Time for graph and analysis: 0.181 seconds
+
+
+---- Test run number 0  ----
+-- &#64;IntIdF memory --
+Computed distance sum: 68061.0
+Computed vertex count of path: 23,611
+Start and end of found path: (0, 1, 2, 8, 14) ... (99976, 99982, 99988, 99994)
+Computed distance sum: 68061.0
+&gt; Total peak memory for graph and analysis: 3,532,748 bytes
+-- &#64;IntIdF runtime --
+&gt; Time for graph and analysis: 0.204 seconds
+
+---- Test run number 1  ----
+-- &#64;IntIdF runtime --
+&gt; Time for graph and analysis: 0.206 seconds
+
+---- Test run number 2  ----
+-- &#64;IntIdF runtime --
+&gt; Time for graph and analysis: 0.204 seconds
+
+---- Test run number 3  ----
+-- &#64;IntIdF runtime --
+&gt; Time for graph and analysis: 0.204 seconds
+
+---- Test run number 4  ----
+-- &#64;IntIdF runtime --
+&gt; Time for graph and analysis: 0.205 seconds
+
+
+
+---- Test run number 0  ----
+-- nog&#64;Int memory --
+Computed distance sum: 68061.0
+Computed vertex count of path: 23,611
+Start and end of found path: (0, 1, 2, 8, 14) ... (99976, 99982, 99988, 99994)
+Computed distance sum: 68061.0
+&gt; Total peak memory for graph and analysis: 2,331,378 bytes
+-- nog&#64;Int runtime --
+&gt; Time for graph and analysis: 0.182 seconds
+
+---- Test run number 1  ----
+-- nog&#64;Int runtime --
+&gt; Time for graph and analysis: 0.188 seconds
+
+---- Test run number 2  ----
+-- nog&#64;Int runtime --
+&gt; Time for graph and analysis: 0.182 seconds
+
+---- Test run number 3  ----
+-- nog&#64;Int runtime --
+&gt; Time for graph and analysis: 0.184 seconds
+
+---- Test run number 4  ----
+-- nog&#64;Int runtime --
+&gt; Time for graph and analysis: 0.182 seconds
+
+
+---- Test run number 0  ----
+-- &#64;IntF memory --
+Computed distance sum: 68061.0
+Computed vertex count of path: 23,611
+Start and end of found path: (0, 1, 2, 8, 14) ... (99976, 99982, 99988, 99994)
+Computed distance sum: 68061.0
+&gt; Total peak memory for graph and analysis: 1,860,380 bytes
+-- &#64;IntF runtime --
+&gt; Time for graph and analysis: 0.204 seconds
+
+---- Test run number 1  ----
+-- &#64;IntF runtime --
+&gt; Time for graph and analysis: 0.211 seconds
+
+---- Test run number 2  ----
+-- &#64;IntF runtime --
+&gt; Time for graph and analysis: 0.206 seconds
+
+---- Test run number 3  ----
+-- &#64;IntF runtime --
+&gt; Time for graph and analysis: 0.205 seconds
+
+---- Test run number 4  ----
+-- &#64;IntF runtime --
+&gt; Time for graph and analysis: 0.207 seconds
+
+
+
+---- Test run number 0  ----
+-- nog+intset memory --
+Computed distance sum: 68061.0
+Computed vertex count of path: 23,611
+Start and end of found path: (0, 1, 2, 8, 14) ... (99976, 99982, 99988, 99994)
+Computed distance sum: 68061.0
+&gt; Total peak memory for graph and analysis: 1,859,932 bytes
+-- nog+intset runtime --
+&gt; Time for graph and analysis: 0.204 seconds
+
+---- Test run number 1  ----
+-- nog+intset runtime --
+&gt; Time for graph and analysis: 0.210 seconds
+
+---- Test run number 2  ----
+-- nog+intset runtime --
+&gt; Time for graph and analysis: 0.207 seconds
+
+---- Test run number 3  ----
+-- nog+intset runtime --
+&gt; Time for graph and analysis: 0.207 seconds
+
+---- Test run number 4  ----
+-- nog+intset runtime --
+&gt; Time for graph and analysis: 0.209 seconds
+
+
+
+---- Test run number 0  ----
+-- igraph memory --
+&gt; Peak memory for graph definition: 2,867,708 bytes
+Computed distance sum: -1.0
+Computed vertex count of path: 23,611
+Start and end of found path: (0, 1, 2, 8, 14) ... (99976, 99982, 99988, 99994)
+Distance not computed
+&gt; Total peak memory for graph and analysis: 2,867,708 bytes
+-- igraph runtime --
+&gt; Time for graph definition: 0.202 seconds
+&gt; Time for graph and analysis: 0.245 seconds
+
+---- Test run number 1  ----
+-- igraph runtime --
+&gt; Time for graph definition: 0.187 seconds
+&gt; Time for graph and analysis: 0.231 seconds
+
+---- Test run number 2  ----
+-- igraph runtime --
+&gt; Time for graph definition: 0.184 seconds
+&gt; Time for graph and analysis: 0.227 seconds
+
+---- Test run number 3  ----
+-- igraph runtime --
+&gt; Time for graph definition: 0.185 seconds
+&gt; Time for graph and analysis: 0.228 seconds
+
+---- Test run number 4  ----
+-- igraph runtime --
+&gt; Time for graph definition: 0.186 seconds
+&gt; Time for graph and analysis: 0.228 seconds
+
+
+---- Test run number 0  ----
+-- RetworkX memory --
+&gt; Peak memory for graph definition: 2,793,880 bytes
+Computed distance sum: -1.0
+Computed vertex count of path: 23,611
+Start and end of found path: (0, 1, 2, 8, 14) ... (99976, 99982, 99988, 99994)
+Distance not computed
+&gt; Total peak memory for graph and analysis: 2,989,541 bytes
+-- RetworkX runtime --
+&gt; Time for graph definition: 0.137 seconds
+&gt; Time for graph and analysis: 37.615 seconds
+
+---- Test run number 1  ----
+-- RetworkX runtime --
+&gt; Time for graph definition: 0.136 seconds
+&gt; Time for graph and analysis: 51.053 seconds
+
+---- Test run number 2  ----
+-- RetworkX runtime --
+&gt; Time for graph definition: 0.138 seconds
+&gt; Time for graph and analysis: 57.842 seconds
+
+---- Test run number 3  ----
+-- RetworkX runtime --
+&gt; Time for graph definition: 0.151 seconds
+&gt; Time for graph and analysis: 65.491 seconds
+
+---- Test run number 4  ----
+-- RetworkX runtime --
+&gt; Time for graph definition: 0.151 seconds
+&gt; Time for graph and analysis: 65.562 seconds
+
+
+---- Test run number 0  ----
+-- NetworkX memory --
+&gt; Peak memory for graph definition: 123,319,124 bytes
+Computed distance sum: 68061.0
+Computed vertex count of path: 23,611
+Start and end of found path: (0, 1, 2, 8, 14) ... (99976, 99982, 99988, 99994)
+Computed distance sum: 68061.0
+&gt; Total peak memory for graph and analysis: 9,593,863,188 bytes
+-- NetworkX runtime --
+&gt; Time for graph definition: 0.673 seconds
+&gt; Time for graph and analysis: 91.608 seconds
+
+---- Test run number 1  ----
+-- NetworkX runtime --
+&gt; Time for graph definition: 0.674 seconds
+&gt; Time for graph and analysis: 80.517 seconds
+
+---- Test run number 2  ----
+-- NetworkX runtime --
+&gt; Time for graph definition: 0.672 seconds
+&gt; Time for graph and analysis: 82.669 seconds
+
+---- Test run number 3  ----
+-- NetworkX runtime --
+&gt; Time for graph definition: 0.667 seconds
+&gt; Time for graph and analysis: 88.156 seconds
+
+---- Test run number 4  ----
+-- NetworkX runtime --
+&gt; Time for graph definition: 0.670 seconds
+&gt; Time for graph and analysis: 73.647 seconds
+
+
++-----------+-------+--------+--------------------------------+
+| lib+gear  | runtime (sec.) |   peak memory (bytes)          |
++-----------+-------+--------+---------------+----------------+
+|           | graph |  total |     graph     |     total      |
++===========+=======+========+===============+================+
+| NoGraphs  | _0.00 | __0.22 | ____________0 | ____15,793,736 |
++-----------+-------+--------+---------------+----------------+
+| nog&#64;IntId | _0.00 | __0.18 | ____________0 | _____4,004,268 |
++-----------+-------+--------+---------------+----------------+
+| &#64;IntIdA0B |  n.a. |   n.a. |          n.a. |           n.a. |
++-----------+-------+--------+---------------+----------------+
+| &#64;IntIdL0B | _0.00 | __0.18 | ____________0 | _____4,002,956 |
++-----------+-------+--------+---------------+----------------+
+| &#64;IntIdF   | _0.00 | __0.20 | ____________0 | _____3,532,748 |
++-----------+-------+--------+---------------+----------------+
+| &#64;IntIdF0B |  n.a. |   n.a. |          n.a. |           n.a. |
++-----------+-------+--------+---------------+----------------+
+| nog&#64;Int   | _0.00 | __0.18 | ____________0 | _____2,331,378 |
++-----------+-------+--------+---------------+----------------+
+| &#64;IntF     | _0.00 | __0.21 | ____________0 | _____1,860,380 |
++-----------+-------+--------+---------------+----------------+
+| &#64;IntF0B   |  n.a. |   n.a. |          n.a. |           n.a. |
++-----------+-------+--------+---------------+----------------+
+| nog+intset| _0.00 | __0.21 | ____________0 | _____1,859,932 |
++-----------+-------+--------+---------------+----------------+
+| nog+shift |  n.a. |   n.a. |          n.a. |           n.a. |
++-----------+-------+--------+---------------+----------------+
+| igraph    | _0.19 | __0.23 | ____2,867,708 | _____2,867,708 |
++-----------+-------+--------+---------------+----------------+
+| RetworkX  | _0.14 | _57.84 | ____2,793,880 | _____2,989,541 |
++-----------+-------+--------+---------------+----------------+
+| NetworkX  | _0.67 | _82.67 | __123,319,124 | _9,593,863,188 |
++-----------+-------+--------+---------------+----------------+
+
+
+===== Test case: Depth first search, 1M vertices, exhaustive search =====
+---- Test run number 0  ----
+-- NoGraphs memory --
+Computed #reachable: 999867
+&gt; Total peak memory for graph and analysis: 270,432,188 bytes
+-- NoGraphs runtime --
+&gt; Time for graph and analysis: 7.223 seconds
+
+---- Test run number 1  ----
+-- NoGraphs runtime --
+&gt; Time for graph and analysis: 7.222 seconds
+
+---- Test run number 2  ----
+-- NoGraphs runtime --
+&gt; Time for graph and analysis: 7.249 seconds
+
+---- Test run number 3  ----
+-- NoGraphs runtime --
+&gt; Time for graph and analysis: 7.226 seconds
+
+---- Test run number 4  ----
+-- NoGraphs runtime --
+&gt; Time for graph and analysis: 7.223 seconds
+
+
+---- Test run number 0  ----
+-- nog&#64;IntId memory --
+Computed #reachable: 999867
+&gt; Total peak memory for graph and analysis: 211,978,102 bytes
+-- nog&#64;IntId runtime --
+&gt; Time for graph and analysis: 7.247 seconds
+
+---- Test run number 1  ----
+-- nog&#64;IntId runtime --
+&gt; Time for graph and analysis: 7.243 seconds
+
+---- Test run number 2  ----
+-- nog&#64;IntId runtime --
+&gt; Time for graph and analysis: 7.254 seconds
+
+---- Test run number 3  ----
+-- nog&#64;IntId runtime --
+&gt; Time for graph and analysis: 7.253 seconds
+
+---- Test run number 4  ----
+-- nog&#64;IntId runtime --
+&gt; Time for graph and analysis: 7.248 seconds
+
+
+---- Test run number 0  ----
+-- &#64;IntIdA0B memory --
+Computed #reachable: 999867
+&gt; Total peak memory for graph and analysis: 212,871,191 bytes
+-- &#64;IntIdA0B runtime --
+&gt; Time for graph and analysis: 5.988 seconds
+
+---- Test run number 1  ----
+-- &#64;IntIdA0B runtime --
+&gt; Time for graph and analysis: 5.983 seconds
+
+---- Test run number 2  ----
+-- &#64;IntIdA0B runtime --
+&gt; Time for graph and analysis: 5.977 seconds
+
+---- Test run number 3  ----
+-- &#64;IntIdA0B runtime --
+&gt; Time for graph and analysis: 5.988 seconds
+
+---- Test run number 4  ----
+-- &#64;IntIdA0B runtime --
+&gt; Time for graph and analysis: 5.975 seconds
+
+
+---- Test run number 0  ----
+-- &#64;IntIdL0B memory --
+Computed #reachable: 999867
+&gt; Total peak memory for graph and analysis: 219,924,256 bytes
+-- &#64;IntIdL0B runtime --
+&gt; Time for graph and analysis: 6.241 seconds
+
+---- Test run number 1  ----
+-- &#64;IntIdL0B runtime --
+&gt; Time for graph and analysis: 6.319 seconds
+
+---- Test run number 2  ----
+-- &#64;IntIdL0B runtime --
+&gt; Time for graph and analysis: 6.755 seconds
+
+---- Test run number 3  ----
+-- &#64;IntIdL0B runtime --
+&gt; Time for graph and analysis: 6.856 seconds
+
+---- Test run number 4  ----
+-- &#64;IntIdL0B runtime --
+&gt; Time for graph and analysis: 6.860 seconds
+
+
+---- Test run number 0  ----
+-- &#64;IntIdF memory --
+Computed #reachable: 999867
+&gt; Total peak memory for graph and analysis: 211,978,102 bytes
+-- &#64;IntIdF runtime --
+&gt; Time for graph and analysis: 7.898 seconds
+
+---- Test run number 1  ----
+-- &#64;IntIdF runtime --
+&gt; Time for graph and analysis: 7.896 seconds
+
+---- Test run number 2  ----
+-- &#64;IntIdF runtime --
+&gt; Time for graph and analysis: 7.890 seconds
+
+---- Test run number 3  ----
+-- &#64;IntIdF runtime --
+&gt; Time for graph and analysis: 7.864 seconds
+
+---- Test run number 4  ----
+-- &#64;IntIdF runtime --
+&gt; Time for graph and analysis: 7.852 seconds
+
+
+---- Test run number 0  ----
+-- &#64;IntIdF0B memory --
+Computed #reachable: 999867
+&gt; Total peak memory for graph and analysis: 212,871,191 bytes
+-- &#64;IntIdF0B runtime --
+&gt; Time for graph and analysis: 5.992 seconds
+
+---- Test run number 1  ----
+-- &#64;IntIdF0B runtime --
+&gt; Time for graph and analysis: 5.973 seconds
+
+---- Test run number 2  ----
+-- &#64;IntIdF0B runtime --
+&gt; Time for graph and analysis: 5.987 seconds
+
+---- Test run number 3  ----
+-- &#64;IntIdF0B runtime --
+&gt; Time for graph and analysis: 5.961 seconds
+
+---- Test run number 4  ----
+-- &#64;IntIdF0B runtime --
+&gt; Time for graph and analysis: 5.965 seconds
+
+
+---- Test run number 0  ----
+-- nog&#64;Int memory --
+Computed #reachable: 999867
+&gt; Total peak memory for graph and analysis: 23,904,842 bytes
+-- nog&#64;Int runtime --
+&gt; Time for graph and analysis: 7.367 seconds
+
+---- Test run number 1  ----
+-- nog&#64;Int runtime --
+&gt; Time for graph and analysis: 7.374 seconds
+
+---- Test run number 2  ----
+-- nog&#64;Int runtime --
+&gt; Time for graph and analysis: 7.356 seconds
+
+---- Test run number 3  ----
+-- nog&#64;Int runtime --
+&gt; Time for graph and analysis: 7.353 seconds
+
+---- Test run number 4  ----
+-- nog&#64;Int runtime --
+&gt; Time for graph and analysis: 7.361 seconds
+
+
+---- Test run number 0  ----
+-- &#64;IntF memory --
+Computed #reachable: 999867
+&gt; Total peak memory for graph and analysis: 23,904,842 bytes
+-- &#64;IntF runtime --
+&gt; Time for graph and analysis: 7.372 seconds
+
+---- Test run number 1  ----
+-- &#64;IntF runtime --
+&gt; Time for graph and analysis: 7.357 seconds
+
+---- Test run number 2  ----
+-- &#64;IntF runtime --
+&gt; Time for graph and analysis: 7.358 seconds
+
+---- Test run number 3  ----
+-- &#64;IntF runtime --
+&gt; Time for graph and analysis: 7.352 seconds
+
+---- Test run number 4  ----
+-- &#64;IntF runtime --
+&gt; Time for graph and analysis: 7.354 seconds
+
+
+---- Test run number 0  ----
+-- &#64;IntF0B memory --
+Computed #reachable: 999867
+&gt; Total peak memory for graph and analysis: 24,797,931 bytes
+-- &#64;IntF0B runtime --
+&gt; Time for graph and analysis: 6.042 seconds
+
+---- Test run number 1  ----
+-- &#64;IntF0B runtime --
+&gt; Time for graph and analysis: 6.050 seconds
+
+---- Test run number 2  ----
+-- &#64;IntF0B runtime --
+&gt; Time for graph and analysis: 6.055 seconds
+
+---- Test run number 3  ----
+-- &#64;IntF0B runtime --
+&gt; Time for graph and analysis: 6.064 seconds
+
+---- Test run number 4  ----
+-- &#64;IntF0B runtime --
+&gt; Time for graph and analysis: 6.045 seconds
+
+
+---- Test run number 0  ----
+-- nog+intset memory --
+Computed #reachable: 999867
+&gt; Total peak memory for graph and analysis: 23,911,252 bytes
+-- nog+intset runtime --
+&gt; Time for graph and analysis: 5.618 seconds
+
+---- Test run number 1  ----
+-- nog+intset runtime --
+&gt; Time for graph and analysis: 5.585 seconds
+
+---- Test run number 2  ----
+-- nog+intset runtime --
+&gt; Time for graph and analysis: 5.589 seconds
+
+---- Test run number 3  ----
+-- nog+intset runtime --
+&gt; Time for graph and analysis: 5.587 seconds
+
+---- Test run number 4  ----
+-- nog+intset runtime --
+&gt; Time for graph and analysis: 5.597 seconds
+
+
+
+
+
+
++-----------+-------+--------+--------------------------------+
+| lib+gear  | runtime (sec.) |   peak memory (bytes)          |
++-----------+-------+--------+---------------+----------------+
+|           | graph |  total |     graph     |     total      |
++===========+=======+========+===============+================+
+| NoGraphs  | _0.00 | __7.22 | ____________0 | ___270,432,188 |
++-----------+-------+--------+---------------+----------------+
+| nog&#64;IntId | _0.00 | __7.25 | ____________0 | ___211,978,102 |
++-----------+-------+--------+---------------+----------------+
+| &#64;IntIdA0B | _0.00 | __5.98 | ____________0 | ___212,871,191 |
++-----------+-------+--------+---------------+----------------+
+| &#64;IntIdL0B | _0.00 | __6.75 | ____________0 | ___219,924,256 |
++-----------+-------+--------+---------------+----------------+
+| &#64;IntIdF   | _0.00 | __7.89 | ____________0 | ___211,978,102 |
++-----------+-------+--------+---------------+----------------+
+| &#64;IntIdF0B | _0.00 | __5.97 | ____________0 | ___212,871,191 |
++-----------+-------+--------+---------------+----------------+
+| nog&#64;Int   | _0.00 | __7.36 | ____________0 | ____23,904,842 |
++-----------+-------+--------+---------------+----------------+
+| &#64;IntF     | _0.00 | __7.36 | ____________0 | ____23,904,842 |
++-----------+-------+--------+---------------+----------------+
+| &#64;IntF0B   | _0.00 | __6.05 | ____________0 | ____24,797,931 |
++-----------+-------+--------+---------------+----------------+
+| nog+intset| _0.00 | __5.59 | ____________0 | ____23,911,252 |
++-----------+-------+--------+---------------+----------------+
+| nog+shift |  n.a. |   n.a. |          n.a. |           n.a. |
++-----------+-------+--------+---------------+----------------+
+| igraph    |  n.a. |   n.a. |          n.a. |           n.a. |
++-----------+-------+--------+---------------+----------------+
+| RetworkX  |  n.a. |   n.a. |          n.a. |           n.a. |
++-----------+-------+--------+---------------+----------------+
+| NetworkX  |  n.a. |   n.a. |          n.a. |           n.a. |
++-----------+-------+--------+---------------+----------------+
+</pre>
+</div>
+</body>
+</html>
