@@ -63,7 +63,7 @@ given vertex i, it yields the edges starting at i as tuples (vertex, weight).
 
 **Tasks and demanded results**
 
-**A. Base scenario: Full search**
+A. **Base scenario: Full search**
 
   In this scenario, a graph has to be (nearly) **fully searched**
   for solving the respective analysis task.
