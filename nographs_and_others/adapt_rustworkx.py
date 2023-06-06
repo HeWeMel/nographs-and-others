@@ -3,11 +3,11 @@ from typing import Optional, Any
 
 from nographs_and_others.library_adapter import AdaptLibrary, NextEdges
 
-import retworkx as rx  # type: ignore
+import rustworkx as rx  # type: ignore
 
 
-class AdaptRetworkX(AdaptLibrary):
-    name = "RetworkX"
+class AdaptRustworkX(AdaptLibrary):
+    name = "rustworkx"
 
     def __init__(self) -> None:
         super().__init__()
@@ -15,20 +15,34 @@ class AdaptRetworkX(AdaptLibrary):
         self.index_of_vertex: Any = None
 
     def build_graph(self) -> None:
+        next_edges = self.next_edges
         self.g = g = rx.PyDiGraph()
 
         # API works with vertex indices
         index_of_vertex = g.add_nodes_from(range(self.graph_size))
         self.index_of_vertex = index_of_vertex
 
-        # Adding single edges is fast for this library, so gone
-        # the easy way here
-        next_edges = self.next_edges
+        # For Python 3.10 and with a previous version of Rustworkx, adding edges
+        # one by one was fast. This was the code used:
+        # for from_vertex in range(self.max_vertex + 1):
+        #     from_vertex_index = index_of_vertex[from_vertex]
+        #     for to_vertex, weight in next_edges(from_vertex, None):
+        #         to_vertex_index = index_of_vertex[to_vertex]
+        #         g.add_edge(from_vertex_index, to_vertex_index, weight)
+
+        # Load chunks of about 10 000 edges per step into the library.
+        # (Balance between too much calls and too large python lists...)
+        edges = []
         for from_vertex in range(self.max_vertex + 1):
             from_vertex_index = index_of_vertex[from_vertex]
-            for to_vertex, weight in next_edges(from_vertex, None):
+            for (to_vertex, weight) in next_edges(from_vertex, None):
                 to_vertex_index = index_of_vertex[to_vertex]
-                g.add_edge(from_vertex_index, to_vertex_index, weight)
+                edges.append((from_vertex_index, to_vertex_index, weight))
+            if len(edges) > 10000:
+                g.add_edges_from(edges)
+                edges = []
+        if len(edges) > 0:
+            g.add_edges_from(edges)
 
     def breadth_first_search(self, start_vertex: int, goal_vertex: int) -> int:
         class DepthVisitor(rx.visit.BFSVisitor):

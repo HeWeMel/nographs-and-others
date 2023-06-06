@@ -22,6 +22,8 @@ class AdaptIgraph(AdaptLibrary):
         self.g: Optional[ig.Graph] = None
 
     def build_graph(self) -> None:
+        next_edges = self.next_edges
+
         # No vertex to id translation necessary, since example fits
         # to the index space of the library.
         self.g = g = ig.Graph(n=self.graph_size, directed=True)
@@ -31,7 +33,7 @@ class AdaptIgraph(AdaptLibrary):
         edges = []
         weights = []
         for i in range(self.max_vertex + 1):
-            for (j, w) in self.next_edges(i, None):
+            for (j, w) in next_edges(i, None):
                 edges.append((i, j))
                 weights.append(w)
             if len(edges) > 10000:

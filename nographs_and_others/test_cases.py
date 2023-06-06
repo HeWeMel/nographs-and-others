@@ -36,11 +36,13 @@ class TestCase(ABC):
 
     vertices_count is the number of vertices that need to be regarded.
     """
+
     name: str = "undefined"
 
     def __init__(self) -> None:
         def empty_next_edges(i, *_):
             return []
+
         self.next_edges: Callable[
             [int, Any], Iterable[tuple[int, float]]
         ] = empty_next_edges
@@ -49,11 +51,14 @@ class TestCase(ABC):
         self.max_vertex_told = 0
         self.graph_size = 0
 
-    def _define(self,
-                next_edges: Callable[[int, Any], Iterable[tuple[int, float]]],
-                vertices_count: int, max_vertex: int, max_vertex_told: int
-                ) -> None:
-        """ Save next_edges function and test case attributes. Compute graph_size.
+    def _define(
+        self,
+        next_edges: Callable[[int, Any], Iterable[tuple[int, float]]],
+        vertices_count: int,
+        max_vertex: int,
+        max_vertex_told: int,
+    ) -> None:
+        """Save next_edges function and test case attributes. Compute graph_size.
 
         max_vertex is the highest vertex necessary to visit in order to solve
         the task. The edges from this vertex are to be regarded, and thus,
@@ -71,9 +76,12 @@ class TestCase(ABC):
         # the vertices up to max_vertex. The sub graph to be regarded needs vertices
         # up to this maximum.
         self.graph_size = (
-                              max(t for f in range(self.max_vertex_told + 1)
-                                  for t, *_ in self.next_edges(f, None))
-                          ) + 1
+            max(
+                t
+                for f in range(self.max_vertex_told + 1)
+                for t, *_ in self.next_edges(f, None)
+            )
+        ) + 1
 
     def _compute_graph_size(self) -> None:
         """Compute graph size, the
@@ -82,13 +90,14 @@ class TestCase(ABC):
         up to this maximum.
         """
         self.graph_size = (
-            max(t for f in range(self.max_vertex_told + 1)
-                for t, *_ in self.next_edges(f, None))
+            max(
+                t
+                for f in range(self.max_vertex_told + 1)
+                for t, *_ in self.next_edges(f, None)
+            )
         ) + 1
 
-    def next_edges_function(
-            self
-    ) -> Callable[[int, None], Iterable[tuple[int, float]]]:
+    def next_edges_function(self) -> Callable[[int, None], Iterable[tuple[int, float]]]:
         """Just return the next edges function. The test frame will call this
         to make sure, that subsequent accesses to the function that happen
         during a test run need no time or memory for initialisation, because
@@ -110,8 +119,12 @@ class TestCase(ABC):
         """
         library_adaptor.build_graph()
 
-    def search(self, library_adaptor: AdaptLibrary,
-               print_results: bool, gc_on_multiple_runs: bool) -> None:
+    def search(
+        self,
+        library_adaptor: AdaptLibrary,
+        print_results: bool,
+        gc_on_multiple_runs: bool,
+    ) -> None:
         """Perform the search defines by method do_search of the concrete sub
         class. If the library adapter does not implement the method the test
         case calls, print error message."""
@@ -122,8 +135,12 @@ class TestCase(ABC):
             # or the search in the library adapter
             print("! " + str(e))
 
-    def do_search(self, library_adaptor: AdaptLibrary,
-                  print_results: bool, gc_on_multiple_runs: bool) -> None:
+    def do_search(
+        self,
+        library_adaptor: AdaptLibrary,
+        print_results: bool,
+        gc_on_multiple_runs: bool,
+    ) -> None:
         """Call library_adaptor to execute the test case, print helpful
         result data and check results by an assertion.
 
@@ -139,8 +156,10 @@ class TestCase(ABC):
         pass
 
     def compute_infos_from_iteration(
-            self, start_vertices: Sequence[int],
-            vertex_iterator: Iterator, goal_vertices: Iterable[int]
+        self,
+        start_vertices: Sequence[int],
+        vertex_iterator: Iterator,
+        goal_vertices: Iterable[int],
     ):
         """Compute and check the number of vertices that need to be regarded for solving
         the test case, and the highest vertex that needs to be explored together
@@ -171,8 +190,7 @@ class TestCase(ABC):
                 goal_vertices.discard(vertex)
                 if len(goal_vertices) == 0:
                     print(f"{self.name}:")
-                    print(f"  {vertices_count=}, "
-                          + f"{min_vertex=}, {max_vertex=}")
+                    print(f"  {vertices_count=}, " + f"{min_vertex=}, {max_vertex=}")
                     assert vertices_count == self.vertices_count
                     assert max_vertex == self.max_vertex
                     # todo: copy values to cases and add assert here
@@ -186,13 +204,21 @@ class CaseBreadthFirstSearch(TestCase):
 
     def __init__(self) -> None:
         super().__init__()
-        super()._define(next_edges=test_next_edges, vertices_count=1199991,
-                        max_vertex=1200000, max_vertex_told=1200000)
+        super()._define(
+            next_edges=test_next_edges,
+            vertices_count=1199991,
+            max_vertex=1200000,
+            max_vertex_told=1200000,
+        )
         self.start_vertex = 0
         self.goal_vertices = [1200000]
 
-    def do_search(self, library_adaptor: AdaptLibrary,
-                  print_results: bool, gc_on_multiple_runs: bool) -> None:
+    def do_search(
+        self,
+        library_adaptor: AdaptLibrary,
+        print_results: bool,
+        gc_on_multiple_runs: bool,
+    ) -> None:
         depth: int = library_adaptor.breadth_first_search(
             self.start_vertex, self.goal_vertices[0]
         )
@@ -235,18 +261,26 @@ class CaseDepthFirstSearch(TestCase):
         # assert depth == 650189
 
         def test_dfs_next_edges(v, *_):
-            """ 5 pseudo-random edges in range(1000000) for each vertex"""
+            """5 pseudo-random edges in range(1000000) for each vertex"""
             for i in range(9):
-                yield hash(1/(v*10+i+1)) % 1000000, 1
+                yield hash(1 / (v * 10 + i + 1)) % 1000000, 1
 
         super().__init__()
-        super()._define(next_edges=test_dfs_next_edges, vertices_count=975509,
-                        max_vertex=999999, max_vertex_told=999999)
+        super()._define(
+            next_edges=test_dfs_next_edges,
+            vertices_count=975509,
+            max_vertex=999999,
+            max_vertex_told=999999,
+        )
         self.start_vertex = 0
         self.goal_vertices = [500000]
 
-    def do_search(self, library_adaptor: AdaptLibrary,
-                  print_results: bool, gc_on_multiple_runs: bool) -> None:
+    def do_search(
+        self,
+        library_adaptor: AdaptLibrary,
+        print_results: bool,
+        gc_on_multiple_runs: bool,
+    ) -> None:
         depth: int = library_adaptor.depth_first_search(
             self.start_vertex, self.goal_vertices[0]
         )
@@ -266,10 +300,15 @@ class CaseDepthFirstSearch(TestCase):
 
 
 class CasesDijkstra(TestCase, ABC):
-    def __init__(self,
-                 next_edges: Callable[[int, None], Iterable[tuple[int, float]]],
-                 start_vertex: int, goal_vertices: Sequence[int],
-                 vertices_count: int, max_vertex: int, max_vertex_told) -> None:
+    def __init__(
+        self,
+        next_edges: Callable[[int, None], Iterable[tuple[int, float]]],
+        start_vertex: int,
+        goal_vertices: Sequence[int],
+        vertices_count: int,
+        max_vertex: int,
+        max_vertex_told,
+    ) -> None:
         super().__init__()
         super()._define(next_edges, vertices_count, max_vertex, max_vertex_told)
         self.start_vertex = start_vertex
@@ -287,12 +326,21 @@ class CaseDijkstraDistance(CasesDijkstra):
     name = "Dijkstra distances, 1,2 M vertices, 3 goals"
 
     def __init__(self):
-        super().__init__(test_next_edges,
-                         0, [1000000, 1150000, 1200000], vertices_count=1200002,
-                         max_vertex=1200006, max_vertex_told=1200006)
+        super().__init__(
+            test_next_edges,
+            0,
+            [1000000, 1150000, 1200000],
+            vertices_count=1200002,
+            max_vertex=1200006,
+            max_vertex_told=1200006,
+        )
 
-    def do_search(self, library_adaptor: AdaptLibrary,
-                  print_results: bool, gc_on_multiple_runs: bool):
+    def do_search(
+        self,
+        library_adaptor: AdaptLibrary,
+        print_results: bool,
+        gc_on_multiple_runs: bool,
+    ):
         distance: float = library_adaptor.dijkstra_distances(
             self.start_vertex, self.goal_vertices
         )
@@ -305,11 +353,14 @@ class CaseDijkstraDistancePart(CasesDijkstra):
     name = "Dijkstra distances, 3,6 M vertices, 1 goal, 1/3 regarded"
 
     def __init__(self):
-        super().__init__(test_next_edges,
-                         1200000, [2400000], 1200000, 2400004, 3600000)
+        super().__init__(test_next_edges, 1200000, [2400000], 1200000, 2400004, 3600000)
 
-    def do_search(self, library_adaptor: AdaptLibrary,
-                  print_results: bool, gc_on_multiple_runs: bool):
+    def do_search(
+        self,
+        library_adaptor: AdaptLibrary,
+        print_results: bool,
+        gc_on_multiple_runs: bool,
+    ):
         distance: float = library_adaptor.dijkstra_distances(
             self.start_vertex, self.goal_vertices
         )
@@ -321,18 +372,26 @@ class CaseDijkstraDistancePart(CasesDijkstra):
 class CaseDijkstraDistanceThreeTimes(CaseDijkstraDistance):
     name = "Dijkstra distances, 1,2 M vertices, 3 goals, executed 3 times"
 
-    def do_search(self, library_adaptor: AdaptLibrary,
-                  print_results: bool, gc_on_multiple_runs: bool):
+    def do_search(
+        self,
+        library_adaptor: AdaptLibrary,
+        print_results: bool,
+        gc_on_multiple_runs: bool,
+    ):
         distances: list[float] = []
         for i in range(3):
-            distances.append(library_adaptor.dijkstra_distances(
-                self.start_vertex, self.goal_vertices
-            ))
+            distances.append(
+                library_adaptor.dijkstra_distances(
+                    self.start_vertex, self.goal_vertices
+                )
+            )
             if gc_on_multiple_runs:
                 gc.collect()
         if print_results:
-            print("Computed distance sums: " + " ".join([
-                f"{distance:.1f}" for distance in distances]))
+            print(
+                "Computed distance sums: "
+                + " ".join([f"{distance:.1f}" for distance in distances])
+            )
         assert sum(abs(distance - 2279877) for distance in distances) < 0.001
 
 
@@ -340,11 +399,14 @@ class CaseDijkstraPathAndDistanceSmall(CasesDijkstra):
     name = "Dijkstra path and distance, 100 T vertices, 1 goal"
 
     def __init__(self):
-        super().__init__(test_next_edges,
-                         0, [100000], 100002, 100008, 100008)
+        super().__init__(test_next_edges, 0, [100000], 100002, 100008, 100008)
 
-    def do_search(self, library_adaptor: AdaptLibrary,
-                  print_results: bool, gc_on_multiple_runs: bool):
+    def do_search(
+        self,
+        library_adaptor: AdaptLibrary,
+        print_results: bool,
+        gc_on_multiple_runs: bool,
+    ):
         distance: float
         path: Sequence[int]
         distance, path = library_adaptor.dijkstra_path_and_distance(
@@ -373,11 +435,14 @@ class CaseDijkstraPathAndDistance(CasesDijkstra):
     name = "Dijkstra path and distance, 1,2 M vertices, 1 goal"
 
     def __init__(self):
-        super().__init__(test_next_edges,
-                         0, [1200000], 1200002, 1200006, 1200006)
+        super().__init__(test_next_edges, 0, [1200000], 1200002, 1200006, 1200006)
 
-    def do_search(self, library_adaptor: AdaptLibrary,
-                  print_results: bool, gc_on_multiple_runs: bool):
+    def do_search(
+        self,
+        library_adaptor: AdaptLibrary,
+        print_results: bool,
+        gc_on_multiple_runs: bool,
+    ):
         distance: float
         path: Sequence[int]
         distance, path = library_adaptor.dijkstra_path_and_distance(
@@ -389,7 +454,7 @@ class CaseDijkstraPathAndDistance(CasesDijkstra):
 
         path_begin, path_end = tuple(path[:5]), tuple(path[-5:])
         if print_results:
-            print("Start and end of found path:", path_begin, "...",path_end)
+            print("Start and end of found path:", path_begin, "...", path_end)
 
         if abs(distance - (-1)) < 0.001:
             if print_results:
@@ -400,4 +465,3 @@ class CaseDijkstraPathAndDistance(CasesDijkstra):
             assert abs(distance - 816674) < 0.001
         assert path_begin == (0, 1, 2, 8, 14)
         assert path_end == (1199976, 1199982, 1199988, 1199994, 1200000)
-

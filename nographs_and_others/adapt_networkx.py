@@ -9,7 +9,7 @@ import networkx as nx  # type: ignore
 class AdaptNetworkX(AdaptLibrary):
     name = "NetworkX"
 
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__()
         self.G: Optional[nx.DiGraph] = None
 

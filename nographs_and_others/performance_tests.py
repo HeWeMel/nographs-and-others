@@ -1,6 +1,14 @@
-import tracemalloc
 import gc
 import timeit
+
+try:
+    import tracemalloc
+
+    can_do_memory_test = True
+except ModuleNotFoundError:
+    import nographs_and_others.dummy_tracemalloc as tracemalloc
+
+    can_do_memory_test = False
 
 from nographs_and_others.library_adapter import AdaptLibrary
 
@@ -54,9 +62,9 @@ class PerformanceTestBuildAndAnalyze(PerformanceTest):
         library_adaptor_cls.warm_up()
         return self.print_time_stats(timer, "> Time for warmup")
 
-    def test_runtime(self,
-                     library_adaptor_cls: type[AdaptLibrary],
-                     test_case) -> tuple[int, int]:
+    def test_runtime(
+        self, library_adaptor_cls: type[AdaptLibrary], test_case
+    ) -> tuple[int, int]:
         print("--", library_adaptor_cls.name, "runtime --")
 
         lib = library_adaptor_cls()
@@ -77,9 +85,9 @@ class PerformanceTestBuildAndAnalyze(PerformanceTest):
         self.prepare_stats()
         return graph_seconds, total_seconds
 
-    def test_needed_memory(self,
-                           library_adaptor_cls: type[AdaptLibrary],
-                           test_case) -> tuple[int, int]:
+    def test_needed_memory(
+        self, library_adaptor_cls: type[AdaptLibrary], test_case
+    ) -> tuple[int, int]:
         print("--", library_adaptor_cls.name, "memory --")
 
         lib = library_adaptor_cls()
@@ -93,7 +101,8 @@ class PerformanceTestBuildAndAnalyze(PerformanceTest):
             test_case.build_graph(lib)
             mem_peak = self.current_mem_stats()
             graph_mem = self.print_mem_stats(
-                mem_peak, "> Peak memory for graph definition:")
+                mem_peak, "> Peak memory for graph definition:"
+            )
         else:
             graph_mem = 0
 
